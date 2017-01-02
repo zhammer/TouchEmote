@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		735F789D1E1ADFAB00D8ED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */; };
+		735F789F1E1ADFAB00D8ED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F789E1E1ADFAB00D8ED72 /* ViewController.swift */; };
+		735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 735F78A01E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld */; };
+		735F78A41E1ADFAB00D8ED72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735F78A31E1ADFAB00D8ED72 /* Assets.xcassets */; };
+		735F78A71E1ADFAB00D8ED72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735F78A51E1ADFAB00D8ED72 /* Main.storyboard */; };
+		735F78B21E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78B11E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift */; };
+		735F78BD1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		735F78AE1E1ADFAB00D8ED72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 735F78911E1ADFAB00D8ED72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 735F78981E1ADFAB00D8ED72;
+			remoteInfo = TouchEmoteWithData;
+		};
+		735F78B91E1ADFAB00D8ED72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 735F78911E1ADFAB00D8ED72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 735F78981E1ADFAB00D8ED72;
+			remoteInfo = TouchEmoteWithData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		735F78991E1ADFAB00D8ED72 /* TouchEmoteWithData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchEmoteWithData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		735F789E1E1ADFAB00D8ED72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		735F78A11E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TouchEmoteWithData.xcdatamodel; sourceTree = "<group>"; };
+		735F78A31E1ADFAB00D8ED72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		735F78A61E1ADFAB00D8ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		735F78A81E1ADFAB00D8ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		735F78AD1E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchEmoteWithDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		735F78B11E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEmoteWithDataTests.swift; sourceTree = "<group>"; };
+		735F78B31E1ADFAB00D8ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		735F78B81E1ADFAB00D8ED72 /* TouchEmoteWithDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchEmoteWithDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEmoteWithDataUITests.swift; sourceTree = "<group>"; };
+		735F78BE1E1ADFAC00D8ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		735F78961E1ADFAB00D8ED72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735F78AA1E1ADFAB00D8ED72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735F78B51E1ADFAB00D8ED72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		735F78901E1ADFAB00D8ED72 = {
+			isa = PBXGroup;
+			children = (
+				735F789B1E1ADFAB00D8ED72 /* TouchEmoteWithData */,
+				735F78B01E1ADFAB00D8ED72 /* TouchEmoteWithDataTests */,
+				735F78BB1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests */,
+				735F789A1E1ADFAB00D8ED72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		735F789A1E1ADFAB00D8ED72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				735F78991E1ADFAB00D8ED72 /* TouchEmoteWithData.app */,
+				735F78AD1E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.xctest */,
+				735F78B81E1ADFAB00D8ED72 /* TouchEmoteWithDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		735F789B1E1ADFAB00D8ED72 /* TouchEmoteWithData */ = {
+			isa = PBXGroup;
+			children = (
+				735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */,
+				735F789E1E1ADFAB00D8ED72 /* ViewController.swift */,
+				735F78A31E1ADFAB00D8ED72 /* Assets.xcassets */,
+				735F78A51E1ADFAB00D8ED72 /* Main.storyboard */,
+				735F78A81E1ADFAB00D8ED72 /* Info.plist */,
+				735F78A01E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld */,
+			);
+			path = TouchEmoteWithData;
+			sourceTree = "<group>";
+		};
+		735F78B01E1ADFAB00D8ED72 /* TouchEmoteWithDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				735F78B11E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift */,
+				735F78B31E1ADFAB00D8ED72 /* Info.plist */,
+			);
+			path = TouchEmoteWithDataTests;
+			sourceTree = "<group>";
+		};
+		735F78BB1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */,
+				735F78BE1E1ADFAC00D8ED72 /* Info.plist */,
+			);
+			path = TouchEmoteWithDataUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		735F78981E1ADFAB00D8ED72 /* TouchEmoteWithData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 735F78C11E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithData" */;
+			buildPhases = (
+				735F78951E1ADFAB00D8ED72 /* Sources */,
+				735F78961E1ADFAB00D8ED72 /* Frameworks */,
+				735F78971E1ADFAB00D8ED72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchEmoteWithData;
+			productName = TouchEmoteWithData;
+			productReference = 735F78991E1ADFAB00D8ED72 /* TouchEmoteWithData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		735F78AC1E1ADFAB00D8ED72 /* TouchEmoteWithDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 735F78C41E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithDataTests" */;
+			buildPhases = (
+				735F78A91E1ADFAB00D8ED72 /* Sources */,
+				735F78AA1E1ADFAB00D8ED72 /* Frameworks */,
+				735F78AB1E1ADFAB00D8ED72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				735F78AF1E1ADFAB00D8ED72 /* PBXTargetDependency */,
+			);
+			name = TouchEmoteWithDataTests;
+			productName = TouchEmoteWithDataTests;
+			productReference = 735F78AD1E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		735F78B71E1ADFAB00D8ED72 /* TouchEmoteWithDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 735F78C71E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithDataUITests" */;
+			buildPhases = (
+				735F78B41E1ADFAB00D8ED72 /* Sources */,
+				735F78B51E1ADFAB00D8ED72 /* Frameworks */,
+				735F78B61E1ADFAB00D8ED72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				735F78BA1E1ADFAB00D8ED72 /* PBXTargetDependency */,
+			);
+			name = TouchEmoteWithDataUITests;
+			productName = TouchEmoteWithDataUITests;
+			productReference = 735F78B81E1ADFAB00D8ED72 /* TouchEmoteWithDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		735F78911E1ADFAB00D8ED72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Zach Hammer";
+				TargetAttributes = {
+					735F78981E1ADFAB00D8ED72 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					735F78AC1E1ADFAB00D8ED72 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 735F78981E1ADFAB00D8ED72;
+					};
+					735F78B71E1ADFAB00D8ED72 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 735F78981E1ADFAB00D8ED72;
+					};
+				};
+			};
+			buildConfigurationList = 735F78941E1ADFAB00D8ED72 /* Build configuration list for PBXProject "TouchEmoteWithData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 735F78901E1ADFAB00D8ED72;
+			productRefGroup = 735F789A1E1ADFAB00D8ED72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				735F78981E1ADFAB00D8ED72 /* TouchEmoteWithData */,
+				735F78AC1E1ADFAB00D8ED72 /* TouchEmoteWithDataTests */,
+				735F78B71E1ADFAB00D8ED72 /* TouchEmoteWithDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		735F78971E1ADFAB00D8ED72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735F78A41E1ADFAB00D8ED72 /* Assets.xcassets in Resources */,
+				735F78A71E1ADFAB00D8ED72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735F78AB1E1ADFAB00D8ED72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735F78B61E1ADFAB00D8ED72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		735F78951E1ADFAB00D8ED72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735F789F1E1ADFAB00D8ED72 /* ViewController.swift in Sources */,
+				735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */,
+				735F789D1E1ADFAB00D8ED72 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735F78A91E1ADFAB00D8ED72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735F78B21E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735F78B41E1ADFAB00D8ED72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735F78BD1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		735F78AF1E1ADFAB00D8ED72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 735F78981E1ADFAB00D8ED72 /* TouchEmoteWithData */;
+			targetProxy = 735F78AE1E1ADFAB00D8ED72 /* PBXContainerItemProxy */;
+		};
+		735F78BA1E1ADFAB00D8ED72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 735F78981E1ADFAB00D8ED72 /* TouchEmoteWithData */;
+			targetProxy = 735F78B91E1ADFAB00D8ED72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		735F78A51E1ADFAB00D8ED72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735F78A61E1ADFAB00D8ED72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		735F78BF1E1ADFAC00D8ED72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		735F78C01E1ADFAC00D8ED72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		735F78C21E1ADFAC00D8ED72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchEmoteWithData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhammer.TouchEmoteWithData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		735F78C31E1ADFAC00D8ED72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchEmoteWithData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhammer.TouchEmoteWithData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		735F78C51E1ADFAC00D8ED72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchEmoteWithDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhammer.TouchEmoteWithDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchEmoteWithData.app/Contents/MacOS/TouchEmoteWithData";
+			};
+			name = Debug;
+		};
+		735F78C61E1ADFAC00D8ED72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchEmoteWithDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhammer.TouchEmoteWithDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchEmoteWithData.app/Contents/MacOS/TouchEmoteWithData";
+			};
+			name = Release;
+		};
+		735F78C81E1ADFAC00D8ED72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchEmoteWithDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhammer.TouchEmoteWithDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TouchEmoteWithData;
+			};
+			name = Debug;
+		};
+		735F78C91E1ADFAC00D8ED72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TouchEmoteWithDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhammer.TouchEmoteWithDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TouchEmoteWithData;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		735F78941E1ADFAB00D8ED72 /* Build configuration list for PBXProject "TouchEmoteWithData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				735F78BF1E1ADFAC00D8ED72 /* Debug */,
+				735F78C01E1ADFAC00D8ED72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		735F78C11E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				735F78C21E1ADFAC00D8ED72 /* Debug */,
+				735F78C31E1ADFAC00D8ED72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		735F78C41E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				735F78C51E1ADFAC00D8ED72 /* Debug */,
+				735F78C61E1ADFAC00D8ED72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		735F78C71E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				735F78C81E1ADFAC00D8ED72 /* Debug */,
+				735F78C91E1ADFAC00D8ED72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		735F78A01E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				735F78A11E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodel */,
+			);
+			currentVersion = 735F78A11E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodel */;
+			path = TouchEmoteWithData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 735F78911E1ADFAB00D8ED72 /* Project object */;
+}
