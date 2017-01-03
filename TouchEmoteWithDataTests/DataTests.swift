@@ -31,5 +31,30 @@ class DataTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    /* Move this to tests */
+    @IBAction func testClickHander(_ sender: Any) {
+        
+        let allClicks: [NSManagedObject] = fetchDataByType(entityName: Entity.Click)
+        var clicksCounter = 0
+        
+        for emotion in emotions {
+            let clickArray = getClicksOnEmotion(emotion: emotion)
+            if clickArray.count != emotion.value(forKey: EmotionAttr.Count) as! Int {
+                print("Error: \(emotion.value(forKey: EmotionAttr.Emoji)) has mismatched count and num clicks")
+            }
+            clicksCounter += clickArray.count
+            for click in clickArray {
+                if click.value(forKey: ClickAttr.Emotion) as! NSManagedObject != emotion {
+                    print("Error: Click has mismatched emotion")
+                }
+            }
+        }
+        if allClicks.count != clicksCounter {
+            print("Error: unequal total clicks and clicks on emotions")
+        }
+        
+        print("Test completed")
+    }
 
 }

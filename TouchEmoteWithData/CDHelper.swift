@@ -1,5 +1,5 @@
 //
-//  CoreDataHelper.swift
+//  CDHelper.swift
 //  TouchEmoteWithData
 //
 //  Created by Zach Hammer on 1/3/17.
@@ -13,7 +13,7 @@ import CoreData
 class CDHelper {
     
     /* Initializes core data on app's first run. */
-    func initializeCoreData() {
+    static func initializeCoreData() {
         let context = getContext()
         let entity =  NSEntityDescription.entity(forEntityName: Entity.Emotion, in:context)
         //Create emotion entities with default count
@@ -26,7 +26,7 @@ class CDHelper {
     }
     
     /* Saves context */
-    func saveContext (context: NSManagedObjectContext) {
+    static func saveContext (context: NSManagedObjectContext) {
         do {
             try context.save()
         } catch let error as NSError  {
@@ -36,7 +36,7 @@ class CDHelper {
     }
     
     /* Deletes all objects from Core Data */
-    func clearCoreData() {
+    static func clearCoreData() {
         let context = getContext()
         let emotions: [NSManagedObject] = fetchDataByType(entityName: Entity.Emotion)
         let clicks : [NSManagedObject] = fetchDataByType(entityName: Entity.Click)
@@ -50,13 +50,13 @@ class CDHelper {
     }
     
     /* Returns NSManagedObjectContext reference from AppDelegate */
-    func getContext () -> NSManagedObjectContext {
+    static func getContext () -> NSManagedObjectContext {
         let appDelegate = NSApplication.shared().delegate as! AppDelegate
         return appDelegate.managedObjectContext
     }
     
     /* Fetches data of entity entityName. Returns results as [NSManagedObject] */
-    func fetchDataByType(entityName: String) -> [NSManagedObject] {
+    static func fetchDataByType(entityName: String) -> [NSManagedObject] {
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         var output: [NSManagedObject] = []

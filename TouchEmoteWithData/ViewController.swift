@@ -9,20 +9,25 @@
 import Cocoa
 import CoreData
 
-struct CDEntity {
+struct Entity {
     static let Emotion = "Emotion"
     static let Click = "Click"
 }
 
-struct CDAttribute {
+struct EmotionAttr {
     static let Emoji = "emoji"
     static let Count = "count"
+    static let Clicks = "clicks"
+}
+
+struct ClickAttr {
+    static let Time = "timestamp"
+    static let Emotion = "emotion"
 }
 
 class ViewController: NSViewController {
 
     var emotions: [NSManagedObject] = []
-    let emojis: String = "😁😀🙂😐😕☹️😔"
     @IBOutlet weak var emojiCounts: NSTextField!
     @IBOutlet weak var emojiDisplay: NSTextField!
     
@@ -36,11 +41,11 @@ class ViewController: NSViewController {
     /* VIEW DID LOAD */
     override func viewDidLoad() {
         super.viewDidLoad()
-        if !getCoreData() {
-            initializeCoreData()
+        emotions = CDHelper.fetchDataByType(entityName: Entity.Emotion)
+        if emotions.count == 0 {
+            CDHelper.initializeCoreData()
         }
         updateDisplay()
-//        clearCoreData()
     }
 
     override var representedObject: Any? {
@@ -49,100 +54,47 @@ class ViewController: NSViewController {
         }
     }
     
-    @available(OSX 10.12.2, *)
-    func getTouch() -> NSTouchBar {
-        return touchBar!
-    }
     
-    
+    /* Updates display from CoreData */
     func updateDisplay() {
         var newText = ""
-        getCoreData()
+        emotions = CDHelper.fetchDataByType(entityName: Entity.Emotion)
         for emotion in emotions {
-            let emoji:String = emotion.value(forKey: CDAttribute.Emoji) as! String
-            let count:Int = emotion.value(forKey: CDAttribute.Count) as! Int
+            let emoji:String = emotion.value(forKey: EmotionAttr.Emoji) as! String
+            let count:Int = emotion.value(forKey: EmotionAttr.Count) as! Int
             newText += "\(emoji): \(count)\n"
         }
         emojiCounts.stringValue = newText
     }
     
     /* Stores a click in core data */
+    //TODO: Emotions var as hashmap by emoji if possible
     func storeClick(emoji: String) {
-//        let context = getContext()
-//        let entity =  NSEntityDescription.entity(forEntityName: CDEntity.Emotion, in: context)
-//        let emotion = NSManagedObject(entity: entity!, insertInto: context)
-//        emotion.setValue(emoji, forKey: CDAttribute.Emoji)
+        let context = CDHelper.getContext()
         for emotion in emotions {
-            if emotion.value(forKey: CDAttribute.Emoji) as! String == emoji {
-                let currCount = emotion.value(forKey: CDAttribute.Count) as! Int
-                emotion.setValue(currCount + 1, forKey: CDAttribute.Count)
+            if emotion.value(forKey: EmotionAttr.Emoji) as! String == emoji {
+                let currCount = emotion.value(forKey: EmotionAttr.Count) as! Int
+                emotion.setValue(currCount + 1, forKey: EmotionAttr.Count)
+                let clickEntity =  NSEntityDescription.entity(forEntityName: Entity.Click, in:context)
+                let click = NSManagedObject(entity: clickEntity!, insertInto: context)
+                click.setValue(NSDate(), forKey: ClickAttr.Time)
+                click.setValue(emotion, forKey: ClickAttr.Emotion)
             }
         }
-        do {
-            try getContext().save()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        } catch {
-            
-        }
+        CDHelper.saveContext(context: context)
     }
     
-    /* Fetches core data. Returns false if core data is empty */
-    @discardableResult func getCoreData() -> Bool {
-        let context = getContext()
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: CDEntity.Emotion)
-        do {
-            let results = try context.fetch(fetchRequest)
-            emotions = results as! [NSManagedObject]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        return emotions.count > 0
+    /* Returns touch bar to WindowController */
+    @available(OSX 10.12.2, *)
+    func getTouch() -> NSTouchBar {
+        return touchBar!
     }
     
-    /* Initializes core data on app's first run. */
-    func initializeCoreData() {
-        let context = getContext()
-        let entity =  NSEntityDescription.entity(forEntityName: CDEntity.Emotion, in:context)
-        
-        //Create Emotion entity for each emoji character
-        for emoji in emojis.characters {
-            let emotion = NSManagedObject(entity: entity!, insertInto: context)
-            emotion.setValue(String(emoji), forKey: CDAttribute.Emoji)
-            do {
-                try context.save()
-                emotions.append(emotion)
-            } catch let error as NSError  {
-                print("Could not save \(error), \(error.userInfo)")
-            }
-        }
-        print("Initialized new data set")
+    /* Returns clicks on specified emotion */
+    func getClicks(emotion: NSManagedObject) -> [NSManagedObject] {
+        let clicks = emotion.value(forKey: EmotionAttr.Clicks) as! NSOrderedSet
+        return clicks.array as! [NSManagedObject]
     }
-    
-    func getContext () -> NSManagedObjectContext {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
-        return appDelegate.managedObjectContext
-    }
-    
-    func getPSC () -> NSPersistentStoreCoordinator {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
-        return appDelegate.persistentStoreCoordinator
-    }
-    
-    func clearCoreData() {
-        let context = getContext()
-        for emotion in emotions {
-            context.delete(emotion)
-        }
-        do {
-            try context.save()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-    }
-
-
 
 }
 
