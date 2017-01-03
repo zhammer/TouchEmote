@@ -1,9 +1,6 @@
-//
-//  todo.swift
-//  TouchEmoteWithData
-//
-//  Created by Zach Hammer on 1/2/17.
-//  Copyright © 2017 Zach Hammer. All rights reserved.
-//
+/* TODO */
 
-import Foundation
+/* Sort Core Data emotions by emoji */
+/* Either as a dictionary in Application
+ * Or with some sort of sort return with id in the database
+ */

@@ -14,6 +14,8 @@
 		735F78A71E1ADFAB00D8ED72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735F78A51E1ADFAB00D8ED72 /* Main.storyboard */; };
 		735F78B21E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78B11E1ADFAB00D8ED72 /* TouchEmoteWithDataTests.swift */; };
 		735F78BD1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */; };
+		735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78CA1E1AE08300D8ED72 /* WindowController.swift */; };
+		73711A6D1E1B4C91003C78F3 /* todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73711A6C1E1B4C91003C78F3 /* todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		735F78B81E1ADFAB00D8ED72 /* TouchEmoteWithDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchEmoteWithDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEmoteWithDataUITests.swift; sourceTree = "<group>"; };
 		735F78BE1E1ADFAC00D8ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		735F78CA1E1AE08300D8ED72 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		73711A6C1E1B4C91003C78F3 /* todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */,
+				735F78CA1E1AE08300D8ED72 /* WindowController.swift */,
 				735F789E1E1ADFAB00D8ED72 /* ViewController.swift */,
 				735F78A31E1ADFAB00D8ED72 /* Assets.xcassets */,
 				735F78A51E1ADFAB00D8ED72 /* Main.storyboard */,
 				735F78A81E1ADFAB00D8ED72 /* Info.plist */,
 				735F78A01E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld */,
+				73711A6C1E1B4C91003C78F3 /* todo.swift */,
 			);
 			path = TouchEmoteWithData;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73711A6D1E1B4C91003C78F3 /* todo.swift in Sources */,
 				735F789F1E1ADFAB00D8ED72 /* ViewController.swift in Sources */,
+				735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */,
 				735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */,
 				735F789D1E1ADFAB00D8ED72 /* AppDelegate.swift in Sources */,
 			);
@@ -500,6 +508,7 @@
 				735F78C31E1ADFAC00D8ED72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		735F78C41E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithDataTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +517,7 @@
 				735F78C61E1ADFAC00D8ED72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		735F78C71E1ADFAC00D8ED72 /* Build configuration list for PBXNativeTarget "TouchEmoteWithDataUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +526,7 @@
 				735F78C91E1ADFAC00D8ED72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
