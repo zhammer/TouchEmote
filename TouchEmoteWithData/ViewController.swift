@@ -32,10 +32,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var emojiDisplay: NSTextField!
     
     @IBAction func buttonHandler(_ sender: NSButton) {
-        let emoji = sender.title
-        storeClick(emoji: emoji)
-        emojiDisplay.stringValue = emoji
-        updateDisplay()
+        storeClick(emoji: sender.title)
     }
     
     /* VIEW DID LOAD */
@@ -45,7 +42,6 @@ class ViewController: NSViewController {
         if emotions.count == 0 {
             CDHelper.initializeCoreData()
         }
-        updateDisplay()
     }
 
     override var representedObject: Any? {
@@ -54,18 +50,6 @@ class ViewController: NSViewController {
         }
     }
     
-    
-    /* Updates display from CoreData */
-    func updateDisplay() {
-        var newText = ""
-        emotions = CDHelper.fetchDataByType(entityName: Entity.Emotion)
-        for emotion in emotions {
-            let emoji:String = emotion.value(forKey: EmotionAttr.Emoji) as! String
-            let count:Int = emotion.value(forKey: EmotionAttr.Count) as! Int
-            newText += "\(emoji): \(count)\n"
-        }
-        emojiCounts.stringValue = newText
-    }
     
     /* Stores a click in core data */
     //TODO: Emotions var as hashmap by emoji if possible

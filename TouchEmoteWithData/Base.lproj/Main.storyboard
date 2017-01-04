@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="7104"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
         <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
@@ -660,55 +661,388 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TouchEmoteWithData" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-124"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <windowController id="B8D-0N-5wS" customClass="MyWindowController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="TouchEmote" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="contentRect" x="196" y="288" width="830" height="612"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <value key="minSize" type="size" width="830" height="612"/>
+                        <value key="maxSize" type="size" width="830" height="612"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
-                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="274"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="830" height="612"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-y2-rjn">
-                                <rect key="frame" x="190" y="111" width="100" height="48"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Emoji" id="YV4-a8-Xkq">
-                                    <font key="font" metaFont="system" size="40"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZP-GI-SHJ" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="830" height="612"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="830" id="eIN-mj-wvA"/>
+                                    <constraint firstAttribute="height" constant="612" id="mJX-CJ-vjI"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="osk-hu-oHm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="13" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUi-nQ-xkv" userLabel="Emojis">
+                                <rect key="frame" x="19" y="94" width="792" height="123"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdW-fo-XnQ">
+                                        <rect key="frame" x="-2" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="gxN-xK-lXX"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="😔" id="rbA-ce-vg2">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-yo-9AY">
+                                        <rect key="frame" x="113" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="BJO-E4-DLQ"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="☹️" id="npj-ir-lbe">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-QK-VUE">
+                                        <rect key="frame" x="228" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="KZ1-qc-bGL"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="😕" id="tXb-V1-qUr">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="373-4e-tKC">
+                                        <rect key="frame" x="343" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="qcV-Af-nai"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="😐" id="3T4-Oa-QDY">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-Fw-PXN">
+                                        <rect key="frame" x="458" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="52b-LI-vkj"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="🙂" id="YRW-OX-da4">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pK-5z-Z8P">
+                                        <rect key="frame" x="573" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="doi-fC-Nub"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="😀" id="JcK-En-Uad">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpw-4a-6Vr">
+                                        <rect key="frame" x="688" y="0.0" width="106" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="gxb-Ci-EEZ"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="😁" id="2fa-nh-9Qk">
+                                            <font key="font" size="100" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-TC-wmA" userLabel="Counts">
+                                <rect key="frame" x="20" y="18" width="790" height="99"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Y-PX-0fo">
+                                        <rect key="frame" x="-2" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Vi9-6a-7oO"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="WKM-Kz-Zds">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-GT-XWA">
+                                        <rect key="frame" x="113" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="yGP-uo-jUN"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="7" id="gz6-Ye-hZR">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usm-R2-okr">
+                                        <rect key="frame" x="228" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="rjv-DL-e7s"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="tTK-8c-3eN">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="644-hj-sNA">
+                                        <rect key="frame" x="343" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="SyR-2Z-eka"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9" id="hLW-ff-HGm">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUB-BX-M1k">
+                                        <rect key="frame" x="458" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="wlx-9A-2aU"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="Qw1-Om-kPS">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-He-clU">
+                                        <rect key="frame" x="573" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Xin-ts-EjI"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="Dux-xl-j3Q">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFq-Ig-7iN">
+                                        <rect key="frame" x="688" y="0.0" width="104" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="UGC-lG-YnZ"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="hC7-Jt-xql">
+                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="35" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5e-eY-92u" userLabel="Bars">
+                                <rect key="frame" x="30" y="202" width="770" height="290"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buu-e0-ZLZ" userLabel="Bar">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="ewt-JL-7mw"/>
+                                            <constraint firstAttribute="height" constant="290" id="mxP-IQ-xUU"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="UXy-ZD-Aa9">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529411764706" green="0.19607843137254902" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmN-d0-0sx" userLabel="Bar">
+                                        <rect key="frame" x="115" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="IpI-58-JIK"/>
+                                            <constraint firstAttribute="height" constant="290" id="WBM-Aw-8VL"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="VDa-fr-oIO">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-x4-Tfj" userLabel="Bar">
+                                        <rect key="frame" x="230" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="290" id="3pn-H3-hdg"/>
+                                            <constraint firstAttribute="width" constant="80" id="zWy-Fx-JKt"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="lmX-WU-2oc">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQP-wO-18y" userLabel="Bar">
+                                        <rect key="frame" x="345" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="499-Py-7Rp"/>
+                                            <constraint firstAttribute="height" constant="290" id="w3L-QC-es6"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="vz7-b0-xUi">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDf-KY-aqe" userLabel="Bar">
+                                        <rect key="frame" x="460" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="rjN-j6-9Xc"/>
+                                            <constraint firstAttribute="height" constant="290" id="scl-9T-cMH"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="SHZ-UD-xw7">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVt-sh-eSF" userLabel="Bar">
+                                        <rect key="frame" x="575" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="7up-Ti-OeV"/>
+                                            <constraint firstAttribute="height" constant="290" id="agp-as-J88"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="U6c-X2-3TQ">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDB-yC-cep" userLabel="Bar">
+                                        <rect key="frame" x="690" y="0.0" width="80" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="290" id="1aS-HV-4QV"/>
+                                            <constraint firstAttribute="width" constant="80" id="Zmf-uW-NHO"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="Sl1-Ze-bL2">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.1960784314" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="f40-Va-Myx"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyz-Vk-WqF" userLabel="TimeFrame">
+                                <rect key="frame" x="223" y="518" width="217" height="68"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Today:" id="rQy-I0-5Qb" userLabel="TimeFrame">
+                                    <font key="font" size="60" name="ArialMT"/>
+                                    <color key="textColor" red="0.80392156862745101" green="0.81960784313725488" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qv-sL-a11">
-                                <rect key="frame" x="74" y="46" width="60" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="Ug3-7R-5KL">
-                                    <font key="font" metaFont="system"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgD-Q2-pnn" userLabel="AverageEmoji">
+                                <rect key="frame" x="445" y="509" width="90" height="99"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="🙂" id="tVr-9i-r34" userLabel="AverageEmoji">
+                                    <font key="font" size="80" name=".AppleColorEmojiUI"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="yfJ-y2-rjn" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="JjK-ft-09U"/>
-                            <constraint firstItem="yfJ-y2-rjn" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="gol-rc-dhN"/>
+                            <constraint firstItem="t5e-eY-92u" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="5qz-28-HiE"/>
+                            <constraint firstItem="FUi-nQ-xkv" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="395" id="9PN-yw-Xs6"/>
+                            <constraint firstItem="vfb-TC-wmA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="495" id="AlH-2V-hou"/>
+                            <constraint firstItem="bgD-Q2-pnn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="D5u-nv-JfB"/>
+                            <constraint firstItem="t5e-eY-92u" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="120" id="EFx-K7-yyp"/>
+                            <constraint firstItem="BZP-GI-SHJ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ehd-my-YHG"/>
+                            <constraint firstItem="eyz-Vk-WqF" firstAttribute="trailing" secondItem="m2S-Jp-Qdl" secondAttribute="trailing" constant="-392" id="Lmm-CZ-SBr"/>
+                            <constraint firstItem="vfb-TC-wmA" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Mc1-5o-70I"/>
+                            <constraint firstItem="eyz-Vk-WqF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="26" id="Pkt-BL-mlb"/>
+                            <constraint firstItem="FUi-nQ-xkv" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="gnb-OV-5Ge"/>
+                            <constraint firstAttribute="trailing" secondItem="bgD-Q2-pnn" secondAttribute="trailing" constant="297" id="m3i-WA-MS3"/>
+                            <constraint firstItem="BZP-GI-SHJ" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="rGY-sF-HoM"/>
                         </constraints>
                     </view>
                     <touchBar key="touchBar" customizationIdentifier="true" id="JHp-Y9-STe">
@@ -825,14 +1159,10 @@
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
-                    <connections>
-                        <outlet property="emojiCounts" destination="7qv-sL-a11" id="nUF-MZ-b9a"/>
-                        <outlet property="emojiDisplay" destination="yfJ-y2-rjn" id="HvV-U3-DMZ"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="966"/>
         </scene>
     </scenes>
 </document>
