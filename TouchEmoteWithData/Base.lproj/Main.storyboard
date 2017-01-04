@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="7104"/>
@@ -704,10 +704,10 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="13" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUi-nQ-xkv" userLabel="Emojis">
-                                <rect key="frame" x="19" y="94" width="792" height="123"/>
+                                <rect key="frame" x="19" y="73" width="792" height="144"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdW-fo-XnQ">
-                                        <rect key="frame" x="-2" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="-2" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="gxN-xK-lXX"/>
                                         </constraints>
@@ -718,7 +718,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-yo-9AY">
-                                        <rect key="frame" x="113" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="113" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="BJO-E4-DLQ"/>
                                         </constraints>
@@ -729,7 +729,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-QK-VUE">
-                                        <rect key="frame" x="228" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="228" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="KZ1-qc-bGL"/>
                                         </constraints>
@@ -740,7 +740,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="373-4e-tKC">
-                                        <rect key="frame" x="343" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="343" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="qcV-Af-nai"/>
                                         </constraints>
@@ -751,7 +751,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-Fw-PXN">
-                                        <rect key="frame" x="458" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="458" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="52b-LI-vkj"/>
                                         </constraints>
@@ -762,7 +762,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pK-5z-Z8P">
-                                        <rect key="frame" x="573" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="573" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="doi-fC-Nub"/>
                                         </constraints>
@@ -773,7 +773,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpw-4a-6Vr">
-                                        <rect key="frame" x="688" y="0.0" width="106" height="123"/>
+                                        <rect key="frame" x="688" y="0.0" width="106" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="gxb-Ci-EEZ"/>
                                         </constraints>
@@ -804,81 +804,82 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-TC-wmA" userLabel="Counts">
-                                <rect key="frame" x="20" y="18" width="790" height="99"/>
+                                <rect key="frame" x="20" y="16" width="790" height="81"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Y-PX-0fo">
-                                        <rect key="frame" x="-2" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Y-PX-0fo" userLabel="Count">
+                                        <rect key="frame" x="-2" y="0.0" width="104" height="81"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="OB7-yf-WjY"/>
                                             <constraint firstAttribute="width" constant="100" id="Vi9-6a-7oO"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="WKM-Kz-Zds">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="WKM-Kz-Zds">
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-GT-XWA">
-                                        <rect key="frame" x="113" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-GT-XWA" userLabel="Count">
+                                        <rect key="frame" x="113" y="0.0" width="104" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="yGP-uo-jUN"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="7" id="gz6-Ye-hZR">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1" id="gz6-Ye-hZR">
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usm-R2-okr">
-                                        <rect key="frame" x="228" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usm-R2-okr" userLabel="Count">
+                                        <rect key="frame" x="228" y="0.0" width="104" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="rjv-DL-e7s"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="tTK-8c-3eN">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="644-hj-sNA">
-                                        <rect key="frame" x="343" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="644-hj-sNA" userLabel="Count">
+                                        <rect key="frame" x="343" y="0.0" width="104" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="SyR-2Z-eka"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9" id="hLW-ff-HGm">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="hLW-ff-HGm">
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUB-BX-M1k">
-                                        <rect key="frame" x="458" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUB-BX-M1k" userLabel="Count">
+                                        <rect key="frame" x="458" y="0.0" width="104" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="wlx-9A-2aU"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="Qw1-Om-kPS">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="Qw1-Om-kPS">
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-He-clU">
-                                        <rect key="frame" x="573" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-He-clU" userLabel="Count">
+                                        <rect key="frame" x="573" y="0.0" width="104" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Xin-ts-EjI"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="Dux-xl-j3Q">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="5" id="Dux-xl-j3Q">
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFq-Ig-7iN">
-                                        <rect key="frame" x="688" y="0.0" width="104" height="99"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFq-Ig-7iN" userLabel="Count">
+                                        <rect key="frame" x="688" y="0.0" width="104" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="UGC-lG-YnZ"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="hC7-Jt-xql">
-                                            <font key="font" size="80" name=".AppleColorEmojiUI"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="6" id="hC7-Jt-xql">
+                                            <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -1013,8 +1014,8 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyz-Vk-WqF" userLabel="TimeFrame">
-                                <rect key="frame" x="223" y="518" width="217" height="68"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyz-Vk-WqF" userLabel="TimeFrame">
+                                <rect key="frame" x="259" y="518" width="181" height="68"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Today:" id="rQy-I0-5Qb" userLabel="TimeFrame">
                                     <font key="font" size="60" name="ArialMT"/>
                                     <color key="textColor" red="0.80392156862745101" green="0.81960784313725488" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
@@ -1022,7 +1023,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgD-Q2-pnn" userLabel="AverageEmoji">
-                                <rect key="frame" x="445" y="509" width="90" height="99"/>
+                                <rect key="frame" x="445" y="493" width="90" height="115"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="🙂" id="tVr-9i-r34" userLabel="AverageEmoji">
                                     <font key="font" size="80" name=".AppleColorEmojiUI"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1033,7 +1034,7 @@
                         <constraints>
                             <constraint firstItem="t5e-eY-92u" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="5qz-28-HiE"/>
                             <constraint firstItem="FUi-nQ-xkv" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="395" id="9PN-yw-Xs6"/>
-                            <constraint firstItem="vfb-TC-wmA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="495" id="AlH-2V-hou"/>
+                            <constraint firstItem="vfb-TC-wmA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="515" id="AlH-2V-hou"/>
                             <constraint firstItem="bgD-Q2-pnn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="D5u-nv-JfB"/>
                             <constraint firstItem="t5e-eY-92u" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="120" id="EFx-K7-yyp"/>
                             <constraint firstItem="BZP-GI-SHJ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ehd-my-YHG"/>
@@ -1056,7 +1057,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="qku-f9-G6e"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="ZTI-D8-pym"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1070,7 +1071,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="MfO-JD-TtN"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="fAV-Xu-jlh"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1084,7 +1085,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="hJZ-kD-hvd"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="4QK-v1-1ry"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1098,7 +1099,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="cga-si-5vk"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="XVZ-4I-iaE"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1112,7 +1113,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="qGZ-oB-kpC"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="PDd-JG-bH4"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1126,7 +1127,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="ukK-DO-pjf"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="WU6-6N-r0h"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1140,7 +1141,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="buttonHandler:" target="XfG-lQ-9wD" id="8se-aW-8Qh"/>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="1o2-V2-bXa"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1159,6 +1160,22 @@
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
+                    <connections>
+                        <outlet property="bar_0" destination="mxP-IQ-xUU" id="goA-pi-FNE"/>
+                        <outlet property="bar_1" destination="WBM-Aw-8VL" id="eiL-oS-MNl"/>
+                        <outlet property="bar_2" destination="3pn-H3-hdg" id="61g-Io-CHg"/>
+                        <outlet property="bar_3" destination="w3L-QC-es6" id="ZGU-WP-m52"/>
+                        <outlet property="bar_4" destination="scl-9T-cMH" id="7y8-iI-fIp"/>
+                        <outlet property="bar_5" destination="agp-as-J88" id="rCl-6g-tlO"/>
+                        <outlet property="bar_6" destination="Zmf-uW-NHO" id="6gn-sG-eKl"/>
+                        <outlet property="count_0" destination="D7Y-PX-0fo" id="jBE-0j-r0N"/>
+                        <outlet property="count_1" destination="FyT-GT-XWA" id="6ar-lZ-rYl"/>
+                        <outlet property="count_2" destination="usm-R2-okr" id="eLU-6l-9Go"/>
+                        <outlet property="count_3" destination="644-hj-sNA" id="zi9-ul-WIL"/>
+                        <outlet property="count_4" destination="IUB-BX-M1k" id="sHv-aR-YKm"/>
+                        <outlet property="count_5" destination="Ljl-He-clU" id="SzC-95-Pir"/>
+                        <outlet property="count_6" destination="NFq-Ig-7iN" id="lgK-Tp-iOD"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

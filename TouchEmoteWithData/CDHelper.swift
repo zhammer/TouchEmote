@@ -15,24 +15,14 @@ class CDHelper {
     /* Initializes core data on app's first run. */
     static func initializeCoreData() {
         let context = getContext()
+        assert(fetchDataByType(entityName: Entity.Emotion).count == 0, "Core data already initialized.")
         let entity =  NSEntityDescription.entity(forEntityName: Entity.Emotion, in:context)
-        //Create emotion entities with default count
         for emoji in "😁😀🙂😐😕☹️😔".characters {
             let emotion = NSManagedObject(entity: entity!, insertInto: context)
             emotion.setValue(String(emoji), forKey: EmotionAttr.Emoji)
         }
         saveContext(context: context)
         print("Initialized new data set")
-    }
-    
-    /* Saves context */
-    static func saveContext (context: NSManagedObjectContext) {
-        do {
-            try context.save()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-
     }
     
     /* Deletes all objects from Core Data */
@@ -49,13 +39,7 @@ class CDHelper {
         saveContext(context: context)
     }
     
-    /* Returns NSManagedObjectContext reference from AppDelegate */
-    static func getContext () -> NSManagedObjectContext {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
-        return appDelegate.managedObjectContext
-    }
-    
-    /* Fetches data of entity entityName. Returns results as [NSManagedObject] */
+    /* Fetches data of Entity specified by name. Returns results as [NSManagedObject] */
     static func fetchDataByType(entityName: String) -> [NSManagedObject] {
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
@@ -67,6 +51,27 @@ class CDHelper {
             print("Could not fetch \(error), \(error.userInfo)")
         }
         return output
+    }
+    
+    /* Returns clicks on specified emotion */
+    static func getClicks(emotion: NSManagedObject) -> [NSManagedObject] {
+        let clicks = emotion.value(forKey: EmotionAttr.Clicks) as! NSOrderedSet
+        return clicks.array as! [NSManagedObject]
+    }
+
+    /* Returns NSManagedObjectContext reference from AppDelegate */
+    static func getContext () -> NSManagedObjectContext {
+        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        return appDelegate.managedObjectContext
+    }
+    
+    /* Saves NSManagedOBjectContext */
+    static func saveContext (context: NSManagedObjectContext) {
+        do {
+            try context.save()
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
     
 }

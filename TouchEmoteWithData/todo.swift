@@ -25,5 +25,5 @@
  */
 
 /*
- *
+ * After clicking one emoji fade others until time bar has lifted
  */

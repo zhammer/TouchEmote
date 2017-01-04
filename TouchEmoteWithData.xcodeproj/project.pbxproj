@@ -16,6 +16,7 @@
 		735F78BD1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */; };
 		735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78CA1E1AE08300D8ED72 /* WindowController.swift */; };
 		73711A6D1E1B4C91003C78F3 /* todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73711A6C1E1B4C91003C78F3 /* todo.swift */; };
+		73A78F8D1E1CA9220024C6F1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A78F8C1E1CA9220024C6F1 /* AppData.swift */; };
 		73CBBD811E1C56840055EDB3 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBBD801E1C56840055EDB3 /* DataTests.swift */; };
 		73CBBD831E1C57AC0055EDB3 /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBBD821E1C57AC0055EDB3 /* CDHelper.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		735F78BE1E1ADFAC00D8ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735F78CA1E1AE08300D8ED72 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		73711A6C1E1B4C91003C78F3 /* todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo.swift; sourceTree = "<group>"; };
+		73A78F8C1E1CA9220024C6F1 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = ../AppData.swift; sourceTree = "<group>"; };
 		73CBBD801E1C56840055EDB3 /* DataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		73CBBD821E1C57AC0055EDB3 /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		735F789B1E1ADFAB00D8ED72 /* TouchEmoteWithData */ = {
 			isa = PBXGroup;
 			children = (
+				73A78F8C1E1CA9220024C6F1 /* AppData.swift */,
 				735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */,
 				735F78CA1E1AE08300D8ED72 /* WindowController.swift */,
 				735F789E1E1ADFAB00D8ED72 /* ViewController.swift */,
@@ -276,6 +279,7 @@
 				735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */,
 				735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */,
 				735F789D1E1ADFAB00D8ED72 /* AppDelegate.swift in Sources */,
+				73A78F8D1E1CA9220024C6F1 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,14 +28,37 @@ struct ClickAttr {
 class ViewController: NSViewController {
 
     var emotions: [NSManagedObject] = []
-    @IBOutlet weak var emojiCounts: NSTextField!
-    @IBOutlet weak var emojiDisplay: NSTextField!
     
-    @IBAction func buttonHandler(_ sender: NSButton) {
+    
+    //No IBOutletCollection functionality for OSX apps?
+    @IBOutlet weak var count_0: NSTextField!
+    @IBOutlet weak var count_1: NSTextField!
+    @IBOutlet weak var count_2: NSTextField!
+    @IBOutlet weak var count_3: NSTextField!
+    @IBOutlet weak var count_4: NSTextField!
+    @IBOutlet weak var count_5: NSTextField!
+    @IBOutlet weak var count_6: NSTextField!
+    
+    @IBOutlet weak var bar_0: NSLayoutConstraint!
+    @IBOutlet weak var bar_1: NSLayoutConstraint!
+    @IBOutlet weak var bar_2: NSLayoutConstraint!
+    @IBOutlet weak var bar_3: NSLayoutConstraint!
+    @IBOutlet weak var bar_4: NSLayoutConstraint!
+    @IBOutlet weak var bar_5: NSLayoutConstraint!
+    @IBOutlet weak var bar_6: NSLayoutConstraint!
+    
+    var UIDict: [String: (NSTextField, NSLayoutConstraint)] = [:]
+    //TODO: Build emotion dict
+    var emotionDict: [String: NSManagedObject] = [:]
+    
+    
+    var labels: [NSTextField]?
+    
+    @IBAction func emojiButtonHandler(_ sender: NSButton) {
         storeClick(emoji: sender.title)
     }
     
-    /* VIEW DID LOAD */
+    /* Initializer */
     override func viewDidLoad() {
         super.viewDidLoad()
         emotions = CDHelper.fetchDataByType(entityName: Entity.Emotion)
@@ -44,15 +67,8 @@ class ViewController: NSViewController {
         }
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-    
     
     /* Stores a click in core data */
-    //TODO: Emotions var as hashmap by emoji if possible
     func storeClick(emoji: String) {
         let context = CDHelper.getContext()
         for emotion in emotions {
@@ -68,16 +84,21 @@ class ViewController: NSViewController {
         CDHelper.saveContext(context: context)
     }
     
+    /* Builds UI Dictionary */
+    func buildUIDict() {
+        UIDict["😔"] = (count_0, bar_0)
+        UIDict["☹️"] = (count_1, bar_1)
+        UIDict["😕"] = (count_2, bar_2)
+        UIDict["😐"] = (count_3, bar_3)
+        UIDict["🙂"] = (count_4, bar_4)
+        UIDict["😀"] = (count_5, bar_5)
+        UIDict["😁"] = (count_6, bar_6)
+    }
+    
     /* Returns touch bar to WindowController */
     @available(OSX 10.12.2, *)
     func getTouch() -> NSTouchBar {
         return touchBar!
-    }
-    
-    /* Returns clicks on specified emotion */
-    func getClicks(emotion: NSManagedObject) -> [NSManagedObject] {
-        let clicks = emotion.value(forKey: EmotionAttr.Clicks) as! NSOrderedSet
-        return clicks.array as! [NSManagedObject]
     }
 
 }

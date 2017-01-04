@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TouchEmoteWithData/ViewController.swift"
-            timestampString = "505176208.087104"
+            timestampString = "505244911.79964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -119,13 +119,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TouchEmoteWithData/ViewController.swift"
-            timestampString = "505175059.705926"
+            timestampString = "505244911.79964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "buttonHandler(_:)"
-            landmarkType = "7">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -212,14 +212,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TouchEmoteWithData/ViewController.swift"
-            timestampString = "505176208.087104"
+            filePath = "TouchEmoteWithData/CDHelper.swift"
+            timestampString = "505190946.963701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "ViewController"
-            landmarkType = "3">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "initializeCoreData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TouchEmoteWithData/ViewController.swift"
+            timestampString = "505244911.79964"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
