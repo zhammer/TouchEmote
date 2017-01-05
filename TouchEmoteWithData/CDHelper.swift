@@ -53,6 +53,12 @@ class CDHelper {
         return output
     }
     
+    /* Returns True if Core Data is empty */
+    static func coreIsEmpty() -> Bool {
+        let emotions: [NSManagedObject] = fetchDataByType(entityName: Entity.Emotion)
+        return emotions.count == 0
+    }
+    
     /* Returns clicks on specified emotion */
     static func getClicks(emotion: NSManagedObject) -> [NSManagedObject] {
         let clicks = emotion.value(forKey: EmotionAttr.Clicks) as! NSOrderedSet

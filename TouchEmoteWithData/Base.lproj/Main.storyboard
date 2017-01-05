@@ -812,7 +812,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="OB7-yf-WjY"/>
                                             <constraint firstAttribute="width" constant="100" id="Vi9-6a-7oO"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="WKM-Kz-Zds">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1" id="WKM-Kz-Zds">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -823,7 +823,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="yGP-uo-jUN"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1" id="gz6-Ye-hZR">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="gz6-Ye-hZR">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -834,7 +834,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="rjv-DL-e7s"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="tTK-8c-3eN">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="tTK-8c-3eN">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -845,7 +845,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="SyR-2Z-eka"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="hLW-ff-HGm">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="hLW-ff-HGm">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -856,7 +856,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="wlx-9A-2aU"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="Qw1-Om-kPS">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="5" id="Qw1-Om-kPS">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -867,7 +867,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Xin-ts-EjI"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="5" id="Dux-xl-j3Q">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="6" id="Dux-xl-j3Q">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -878,7 +878,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="UGC-lG-YnZ"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="6" id="hC7-Jt-xql">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="7" id="hC7-Jt-xql">
                                             <font key="font" size="72" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1131,6 +1131,7 @@
                                         </connections>
                                     </button>
                                 </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
                             </touchBarItem>
                             <touchBarItem id="kzO-dj-u6t">
                                 <viewController key="viewController" id="2Vk-gT-seN">
@@ -1149,25 +1150,27 @@
                             <touchBarItem id="Z7z-Qr-CWC">
                                 <viewController key="viewController" id="wVI-Y9-tTD">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-Lk-tBL" userLabel="StatsButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="30"/>
                                         <buttonCell key="cell" type="push" title="Statistics" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aXf-qF-2TB">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
                                 </viewController>
-                                <size key="designTimeSize" width="119" height="30"/>
+                                <size key="designTimeSize" width="120" height="30"/>
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
                     <connections>
+                        <outlet property="averageEmoji" destination="bgD-Q2-pnn" id="W3l-ns-iAd"/>
+                        <outlet property="barTest" destination="Buu-e0-ZLZ" id="Hz6-fI-rtL"/>
                         <outlet property="bar_0" destination="mxP-IQ-xUU" id="goA-pi-FNE"/>
                         <outlet property="bar_1" destination="WBM-Aw-8VL" id="eiL-oS-MNl"/>
                         <outlet property="bar_2" destination="3pn-H3-hdg" id="61g-Io-CHg"/>
                         <outlet property="bar_3" destination="w3L-QC-es6" id="ZGU-WP-m52"/>
                         <outlet property="bar_4" destination="scl-9T-cMH" id="7y8-iI-fIp"/>
                         <outlet property="bar_5" destination="agp-as-J88" id="rCl-6g-tlO"/>
-                        <outlet property="bar_6" destination="Zmf-uW-NHO" id="6gn-sG-eKl"/>
+                        <outlet property="bar_6" destination="1aS-HV-4QV" id="KF1-65-1AR"/>
                         <outlet property="count_0" destination="D7Y-PX-0fo" id="jBE-0j-r0N"/>
                         <outlet property="count_1" destination="FyT-GT-XWA" id="6ar-lZ-rYl"/>
                         <outlet property="count_2" destination="usm-R2-okr" id="eLU-6l-9Go"/>
