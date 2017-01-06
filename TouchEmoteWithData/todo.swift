@@ -15,18 +15,19 @@
  *
  */
 
-/* FIXES 
- *
- * Fix 3 digit count UI issue
- *
- */
+/* Instead of segues, windowcontroller closes old view and opens new view WITH FADE */
 
 /* Fade in emojis and text */
 
 /* Close button override system esc button */
 
+
+
 /* README
  *
+ 
+ * good for learning basics of core data, storyboards, transitions
+ * hacky window transittion
  * acknowledge funny story with zac's app
  * future functionality: emojis like sleepy, sick, angry, loopy
  * different data visualizatoins

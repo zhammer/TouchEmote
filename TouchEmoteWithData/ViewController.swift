@@ -27,14 +27,14 @@ struct ClickAttr {
 
 struct TimeRange {
     static let Day = "day"
-    static let Month = "month"
     static let Week = "week"
+    static let Month = "month"
 }
 
 //TODO: struct for timestamps
 //TimeStart.Day TimeStart.Week TimeStart.Month
 
-class ViewController: NSViewController {
+class ViewController: ViewControllerWithTouchbar {
     
     @IBOutlet weak var averageEmoji: NSTextField!
     @IBOutlet weak var timeRangeLabel: NSTextField!
@@ -62,29 +62,30 @@ class ViewController: NSViewController {
     
     var dayCurr: Date?
     var dayNext: Date?
-    let currTimeRange = TimeRange.Week
+    var currTimeRange = TimeRange.Day
     var countsDay: [String: Int] = [:]
     var countsWeek: [String: Int] = [:]
     var countsMonth: [String: Int] = [:]
     
-    /* Updates app memory counts and stores click in DB */
-    @IBAction func emojiButtonHandler(_ sender: NSButton) {
-        let emoji = sender.title
-        countsDay[emoji]! += 1
-        countsWeek[emoji]! += 1
-        countsMonth[emoji]! += 1
-        CDHelper.storeClick(emoji: emoji)
+    /* Updates currTimeRange and reloads UI */
+    @IBAction func timeRangeButtonHandler(_ sender: NSButton) {
+        currTimeRange = sender.alternateTitle
+        updateUI()
+    }
+    
+    /* Initializes DB and UI */
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        if CDHelper.coreIsEmpty() {
+            CDHelper.initializeCoreData()
+        }
+        buildUIDict()
         updateUI()
     }
     
     /* View Did Load */
     override func viewDidLoad() {
         super.viewDidLoad()
-        if CDHelper.coreIsEmpty() {
-            CDHelper.initializeCoreData()
-        }
-        buildUIDict()
-        updateUI()
     }
     
     /* Updates UI with count and bar heights from Emotion Dict */
@@ -169,7 +170,7 @@ class ViewController: NSViewController {
     
     /* Returns touch bar to WindowController */
     @available(OSX 10.12.2, *)
-    func getTouch() -> NSTouchBar {
+    override func getTouch() -> NSTouchBar {
         return touchBar!
     }
 

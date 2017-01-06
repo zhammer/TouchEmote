@@ -16,8 +16,10 @@
 		735F78BD1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78BC1E1ADFAC00D8ED72 /* TouchEmoteWithDataUITests.swift */; };
 		735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F78CA1E1AE08300D8ED72 /* WindowController.swift */; };
 		73711A6D1E1B4C91003C78F3 /* todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73711A6C1E1B4C91003C78F3 /* todo.swift */; };
+		738351AF1E204FAA00A649BD /* ReplaceSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738351AE1E204FAA00A649BD /* ReplaceSegue.swift */; };
 		73BDDBEF1E1F4F220022AF3B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BDDBEE1E1F4F220022AF3B /* DateHelper.swift */; };
 		73BDDBF11E2002370022AF3B /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BDDBF01E2002370022AF3B /* LogViewController.swift */; };
+		73BDDBF31E200B070022AF3B /* ViewControllerWithTouchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BDDBF21E200B070022AF3B /* ViewControllerWithTouchbar.swift */; };
 		73CBBD811E1C56840055EDB3 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBBD801E1C56840055EDB3 /* DataTests.swift */; };
 		73CBBD831E1C57AC0055EDB3 /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBBD821E1C57AC0055EDB3 /* CDHelper.swift */; };
 /* End PBXBuildFile section */
@@ -55,8 +57,10 @@
 		735F78BE1E1ADFAC00D8ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735F78CA1E1AE08300D8ED72 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		73711A6C1E1B4C91003C78F3 /* todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo.swift; sourceTree = "<group>"; };
+		738351AE1E204FAA00A649BD /* ReplaceSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceSegue.swift; sourceTree = "<group>"; };
 		73BDDBEE1E1F4F220022AF3B /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		73BDDBF01E2002370022AF3B /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		73BDDBF21E200B070022AF3B /* ViewControllerWithTouchbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWithTouchbar.swift; sourceTree = "<group>"; };
 		73CBBD801E1C56840055EDB3 /* DataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		73CBBD821E1C57AC0055EDB3 /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,9 +115,11 @@
 			children = (
 				735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */,
 				735F78CA1E1AE08300D8ED72 /* WindowController.swift */,
+				73BDDBF21E200B070022AF3B /* ViewControllerWithTouchbar.swift */,
 				73BDDBF01E2002370022AF3B /* LogViewController.swift */,
 				735F789E1E1ADFAB00D8ED72 /* ViewController.swift */,
 				73CBBD821E1C57AC0055EDB3 /* CDHelper.swift */,
+				738351AE1E204FAA00A649BD /* ReplaceSegue.swift */,
 				735F78A31E1ADFAB00D8ED72 /* Assets.xcassets */,
 				735F78A51E1ADFAB00D8ED72 /* Main.storyboard */,
 				735F78A81E1ADFAB00D8ED72 /* Info.plist */,
@@ -281,6 +287,8 @@
 				735F789F1E1ADFAB00D8ED72 /* ViewController.swift in Sources */,
 				73BDDBF11E2002370022AF3B /* LogViewController.swift in Sources */,
 				735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */,
+				738351AF1E204FAA00A649BD /* ReplaceSegue.swift in Sources */,
+				73BDDBF31E200B070022AF3B /* ViewControllerWithTouchbar.swift in Sources */,
 				735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */,
 				73BDDBEF1E1F4F220022AF3B /* DateHelper.swift in Sources */,
 				735F789D1E1ADFAB00D8ED72 /* AppDelegate.swift in Sources */,

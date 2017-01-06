@@ -677,7 +677,7 @@
                         <value key="maxSize" type="size" width="830" height="612"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="Zfn-Gh-ldo" kind="relationship" relationship="window.shadowedContentViewController" id="dhA-N7-k3e"/>
                     </connections>
                 </windowController>
             </objects>
@@ -686,8 +686,8 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                <viewController storyboardIdentifier="StatsViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="StatsTouchBar" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="830" height="612"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -804,81 +804,81 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-TC-wmA" userLabel="Counts">
-                                <rect key="frame" x="20" y="16" width="790" height="81"/>
+                                <rect key="frame" x="20" y="22" width="790" height="75"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Y-PX-0fo" userLabel="Count">
-                                        <rect key="frame" x="-2" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="-2" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Vi9-6a-7oO"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1" id="WKM-Kz-Zds">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-GT-XWA" userLabel="Count">
-                                        <rect key="frame" x="113" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="113" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="yGP-uo-jUN"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="gz6-Ye-hZR">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usm-R2-okr" userLabel="Count">
-                                        <rect key="frame" x="228" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="228" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="rjv-DL-e7s"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="tTK-8c-3eN">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="644-hj-sNA" userLabel="Count">
-                                        <rect key="frame" x="343" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="343" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="SyR-2Z-eka"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="4" id="hLW-ff-HGm">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUB-BX-M1k" userLabel="Count">
-                                        <rect key="frame" x="458" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="458" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="wlx-9A-2aU"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="5" id="Qw1-Om-kPS">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-He-clU" userLabel="Count">
-                                        <rect key="frame" x="573" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="573" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Xin-ts-EjI"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="6" id="Dux-xl-j3Q">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFq-Ig-7iN" userLabel="Count">
-                                        <rect key="frame" x="688" y="0.0" width="104" height="81"/>
+                                        <rect key="frame" x="688" y="0.0" width="104" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="UGC-lG-YnZ"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="7" id="hC7-Jt-xql">
-                                            <font key="font" size="72" name="ArialMT"/>
+                                            <font key="font" size="66" name="ArialMT"/>
                                             <color key="textColor" red="0.30196078430000001" green="0.31372549020000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -1045,118 +1045,81 @@
                             <constraint firstItem="BZP-GI-SHJ" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="rGY-sF-HoM"/>
                         </constraints>
                     </view>
-                    <touchBar key="touchBar" customizationIdentifier="true" id="JHp-Y9-STe">
+                    <touchBar key="touchBar" id="ZSo-vk-u6s">
                         <touchBarItems>
-                            <touchBarItem id="Poa-9U-rMo">
-                                <viewController key="viewController" id="IFc-jw-Fxn">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-V6-BR6">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="😔" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sPe-Am-oYW">
+                            <touchBarItem id="F7w-OY-lnY">
+                                <viewController key="viewController" id="9ow-Py-51C">
+                                    <textField key="view" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTl-10-YZP">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="24"/>
+                                        <textFieldCell key="cell" borderStyle="bezel" alignment="left" title="Statistics for:" drawsBackground="YES" id="1rH-Sg-bCa">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </viewController>
+                                <size key="designTimeSize" width="104" height="24"/>
+                            </touchBarItem>
+                            <touchBarItem id="Mbw-RQ-gOE">
+                                <viewController key="viewController" id="vgf-uD-44D">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A9G-9a-J7P">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Today" alternateTitle="day" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kbp-WV-zVk">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="ZTI-D8-pym"/>
+                                            <action selector="timeRangeButtonHandler:" target="XfG-lQ-9wD" id="ufP-7v-6bg"/>
                                         </connections>
                                     </button>
                                 </viewController>
+                                <size key="designTimeSize" width="100" height="30"/>
                             </touchBarItem>
-                            <touchBarItem id="d5L-M3-xUF">
-                                <viewController key="viewController" id="KTx-H4-MEX">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-1E-nZl">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="☹️" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zFf-wX-11b">
+                            <touchBarItem id="KN8-ap-UbU">
+                                <viewController key="viewController" id="gvP-ze-dTc">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IO7-W9-ZxL">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <buttonCell key="cell" type="push" title="This Week" alternateTitle="week" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AFd-LD-j3D">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="fAV-Xu-jlh"/>
+                                            <action selector="timeRangeButtonHandler:" target="XfG-lQ-9wD" id="cbn-UZ-lvM"/>
                                         </connections>
                                     </button>
                                 </viewController>
+                                <size key="designTimeSize" width="100" height="30"/>
                             </touchBarItem>
-                            <touchBarItem id="yVi-4y-n5D">
-                                <viewController key="viewController" id="rp0-ua-FW7">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SA1-X2-G3X">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="😕" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VZF-Gl-Srn">
+                            <touchBarItem id="Rgy-q7-6Ck">
+                                <viewController key="viewController" id="wqx-Gx-B1J">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MbG-XR-gKn">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
+                                        <buttonCell key="cell" type="push" title="This Month" alternateTitle="month" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fXn-Xv-mlb">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="4QK-v1-1ry"/>
+                                            <action selector="timeRangeButtonHandler:" target="XfG-lQ-9wD" id="JiS-83-eHN"/>
                                         </connections>
                                     </button>
                                 </viewController>
+                                <size key="designTimeSize" width="104" height="30"/>
                             </touchBarItem>
-                            <touchBarItem id="gn9-UH-UMY">
-                                <viewController key="viewController" id="5jq-XF-Xcl">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x0K-la-u0a">
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="cXr-Ts-En5"/>
+                            <touchBarItem id="R9d-iJ-N90">
+                                <viewController key="viewController" id="IQ8-Te-keh">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vdJ-jZ-Bix">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="😐" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dCv-9P-FrP">
+                                        <buttonCell key="cell" type="push" title="🙃" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PJx-6K-TMq">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" size="23" name=".AppleColorEmojiUI"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="XVZ-4I-iaE"/>
-                                        </connections>
-                                    </button>
-                                </viewController>
-                            </touchBarItem>
-                            <touchBarItem id="URf-rt-tuS">
-                                <viewController key="viewController" id="sc6-45-uWH">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cag-Vy-nzr">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="🙂" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x01-Vm-SnH">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="PDd-JG-bH4"/>
-                                        </connections>
-                                    </button>
-                                </viewController>
-                            </touchBarItem>
-                            <touchBarItem id="tdb-Ns-PBc">
-                                <viewController key="viewController" id="cX4-nE-Zaf">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0iT-OT-KEq">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="😀" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="47N-VD-AJ7">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="WU6-6N-r0h"/>
+                                            <segue destination="Zfn-Gh-ldo" kind="sheet" customClass="ReplaceWindowContentSegue" customModule="CustomSegue" id="9Eg-aS-ams"/>
                                         </connections>
                                     </button>
                                 </viewController>
                                 <size key="designTimeSize" width="72" height="30"/>
-                            </touchBarItem>
-                            <touchBarItem id="kzO-dj-u6t">
-                                <viewController key="viewController" id="2Vk-gT-seN">
-                                    <button key="view" wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I76-bI-MXB">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <buttonCell key="cell" type="push" title="😁" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4h7-h6-6r0">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="1o2-V2-bXa"/>
-                                        </connections>
-                                    </button>
-                                </viewController>
-                            </touchBarItem>
-                            <touchBarItem id="Z7z-Qr-CWC">
-                                <viewController key="viewController" id="wVI-Y9-tTD">
-                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-Lk-tBL" userLabel="StatsButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
-                                        <buttonCell key="cell" type="push" title="Statistics" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aXf-qF-2TB">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                </viewController>
-                                <size key="designTimeSize" width="120" height="30"/>
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
@@ -1182,12 +1145,12 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="966"/>
+            <point key="canvasLocation" x="75" y="1125"/>
         </scene>
         <!--Log View Controller-->
         <scene sceneID="Vh0-sM-h9l">
             <objects>
-                <viewController id="Zfn-Gh-ldo" customClass="LogViewController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogViewController" id="Zfn-Gh-ldo" customClass="LogViewController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Qwo-jw-cy2">
                         <rect key="frame" x="0.0" y="0.0" width="830" height="612"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1220,10 +1183,144 @@
                             <constraint firstItem="BG5-a5-ZoH" firstAttribute="top" secondItem="Qwo-jw-cy2" secondAttribute="top" id="oBa-sc-4fW"/>
                         </constraints>
                     </view>
+                    <touchBar key="touchBar" customizationIdentifier="true" id="JHp-Y9-STe">
+                        <touchBarItems>
+                            <touchBarItem id="Poa-9U-rMo">
+                                <viewController key="viewController" id="IFc-jw-Fxn">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-V6-BR6">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="😔" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="sPe-Am-oYW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="XfG-lQ-9wD" id="ZTI-D8-pym"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="74" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="d5L-M3-xUF">
+                                <viewController key="viewController" id="KTx-H4-MEX">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-1E-nZl">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="☹️" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="zFf-wX-11b">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="Zfn-Gh-ldo" id="4Da-fa-GvP"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="yVi-4y-n5D">
+                                <viewController key="viewController" id="rp0-ua-FW7">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SA1-X2-G3X">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="😕" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="VZF-Gl-Srn">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="Zfn-Gh-ldo" id="jQm-xB-JHS"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="gn9-UH-UMY">
+                                <viewController key="viewController" id="5jq-XF-Xcl">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x0K-la-u0a">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="😐" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="dCv-9P-FrP">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="Zfn-Gh-ldo" id="yze-wU-AhQ"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="URf-rt-tuS">
+                                <viewController key="viewController" id="sc6-45-uWH">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cag-Vy-nzr">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="🙂" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="x01-Vm-SnH">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="Zfn-Gh-ldo" id="qF6-Rn-uzr"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="tdb-Ns-PBc">
+                                <viewController key="viewController" id="cX4-nE-Zaf">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0iT-OT-KEq">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="😀" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="47N-VD-AJ7">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="Zfn-Gh-ldo" id="8Yd-IV-rwR"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="30"/>
+                            </touchBarItem>
+                            <touchBarItem id="kzO-dj-u6t">
+                                <viewController key="viewController" id="2Vk-gT-seN">
+                                    <button key="view" wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I76-bI-MXB">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="😁" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="4h7-h6-6r0">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="23"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="emojiButtonHandler:" target="Zfn-Gh-ldo" id="nJ2-7y-w9U"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="hYE-aK-5Dt">
+                                <viewController key="viewController" id="Vs7-Ul-KK8">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ocv-EV-R9M">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Statistics" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BEj-XJ-9bm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="testHandler:" target="Zfn-Gh-ldo" id="L2L-Ri-k86"/>
+                                            <segue destination="XfG-lQ-9wD" kind="sheet" customClass="ReplaceSegue" customModule="TouchEmoteWithData" customModuleProvider="target" id="rsc-Lr-OvV"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="121" height="30"/>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
+                    <connections>
+                        <outlet property="mainText" destination="mgb-Ka-Vkg" id="gFo-TO-eOA"/>
+                    </connections>
                 </viewController>
                 <customObject id="f8n-Xc-NGr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1104" y="935"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Eg-aS-ams"/>
+    </inferredMetricsTieBreakers>
 </document>
