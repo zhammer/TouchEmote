@@ -10,6 +10,8 @@ import Foundation
 import Cocoa
 import CoreData
 
+let fetchPredicate = NSPredicate(format: "(emotion.emoji == $emoji) AND time > $timestamp)")
+
 class CDHelper {
     
     /* Initializes core data on app's first run. */
@@ -39,10 +41,19 @@ class CDHelper {
         saveContext(context: context)
     }
     
+    /* Returns True if Core Data is empty */
+    static func coreIsEmpty() -> Bool {
+        let emotions: [NSManagedObject] = fetchDataByType(entityName: Entity.Emotion)
+        return emotions.count == 0
+    }
+    
     /* Fetches data of Entity specified by name. Returns results as [NSManagedObject] */
-    static func fetchDataByType(entityName: String) -> [NSManagedObject] {
+    static func fetchDataByType(entityName: String , predicate: NSPredicate? = nil) -> [NSManagedObject] {
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        if (predicate != nil) {
+            fetchRequest.predicate = predicate
+        }
         var output: [NSManagedObject] = []
         do {
             let results = try context.fetch(fetchRequest)
@@ -53,16 +64,17 @@ class CDHelper {
         return output
     }
     
-    /* Returns True if Core Data is empty */
-    static func coreIsEmpty() -> Bool {
-        let emotions: [NSManagedObject] = fetchDataByType(entityName: Entity.Emotion)
-        return emotions.count == 0
-    }
-    
-    /* Returns clicks on specified emotion */
+    /* Returns all clicks on specified emotion */
     static func getClicks(emotion: NSManagedObject) -> [NSManagedObject] {
         let clicks = emotion.value(forKey: EmotionAttr.Clicks) as! NSOrderedSet
         return clicks.array as! [NSManagedObject]
+    }
+    
+    /* Returns clicks on specific emotion that have ocurred after timestamp parameter */
+    static func getClicksAfterTime(emotion: NSManagedObject, timestamp: NSDate) -> [NSManagedObject] {
+        let emoji = emotion.value(forKey: EmotionAttr.Emoji) as! String
+        let predicate = fetchPredicate.withSubstitutionVariables(["emoji" : emoji, "timestamp" : timestamp])
+        return fetchDataByType(entityName: Entity.Click, predicate: predicate)
     }
 
     /* Returns NSManagedObjectContext reference from AppDelegate */

@@ -34,11 +34,26 @@
  *
  */
 
+/* UIDea
+ *
+ * On click, emotion fades in to center screen
+ * Other buttons lock
+ * close button
+ *
+ */
+
 
 /* README
  *
  * acknowledge funny story with zac's app
  * future functionality: emojis like sleepy, sick, angry, loopy
  * different data visualizatoins
+ * goal is to have it totally non-intrusive, like the spotify icon. i dont always want to see my emotions when i log one, but seems like that functionality is tougher to access
  *
  */
+
+
+let namesBeginningWithLetterPredicate = NSPredicate(format: "(firstName BEGINSWITH[cd] $letter) OR (lastName BEGINSWITH[cd] $letter)")
+
+(people as NSArray).filteredArrayUsingPredicate(namesBeginningWithLetterPredicate.predicateWithSubstitutionVariables(["letter": "A"]))
+// ["Alice Smith", "Quentin Alberts"]

@@ -25,6 +25,9 @@ struct ClickAttr {
     static let Emotion = "emotion"
 }
 
+//TODO: struct for timestamps
+//TimeStart.Day TimeStart.Week TimeStart.Month
+
 class ViewController: NSViewController {
 
     var emotions: [NSManagedObject] = []
