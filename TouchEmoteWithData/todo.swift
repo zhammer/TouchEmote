@@ -21,11 +21,17 @@
  *
  */
 
+/* Fade in emojis and text */
+
+/* Close button override system esc button */
+
 /* README
  *
  * acknowledge funny story with zac's app
  * future functionality: emojis like sleepy, sick, angry, loopy
  * different data visualizatoins
  * goal is to have it totally non-intrusive, like the spotify icon. i dont always want to see my emotions when i log one, but seems like that functionality is tougher to access
+ *
+ * Thanks to NSHipster and RayWenderlich for great, accessible tutorials
  *
  */

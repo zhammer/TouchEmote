@@ -37,6 +37,7 @@ struct TimeRange {
 class ViewController: NSViewController {
     
     @IBOutlet weak var averageEmoji: NSTextField!
+    @IBOutlet weak var timeRangeLabel: NSTextField!
     
     /* No IBOutletCollection functionality for MacOS */
     @IBOutlet weak var count_0: NSTextField!
@@ -56,13 +57,12 @@ class ViewController: NSViewController {
     @IBOutlet weak var bar_6: NSLayoutConstraint!
     
     var UIDict: [String: (NSTextField, NSLayoutConstraint)] = [:]
-    var emotionDict: [String: NSManagedObject] = [:]
     let emojis = "😔☹️😕😐🙂😀😁"
     let maxBarHeight = 290 as Float
     
     var dayCurr: Date?
     var dayNext: Date?
-    let currTimeRange = TimeRange.Day
+    let currTimeRange = TimeRange.Week
     var countsDay: [String: Int] = [:]
     var countsWeek: [String: Int] = [:]
     var countsMonth: [String: Int] = [:]
@@ -73,7 +73,8 @@ class ViewController: NSViewController {
         countsDay[emoji]! += 1
         countsWeek[emoji]! += 1
         countsMonth[emoji]! += 1
-        storeClick(emoji: emoji)
+        CDHelper.storeClick(emoji: emoji)
+        updateUI()
     }
     
     /* View Did Load */
@@ -82,7 +83,6 @@ class ViewController: NSViewController {
         if CDHelper.coreIsEmpty() {
             CDHelper.initializeCoreData()
         }
-        loadEmotions() 
         buildUIDict()
         updateUI()
     }
@@ -95,11 +95,14 @@ class ViewController: NSViewController {
         var totalCount = 0
         var counts: [String: Int] = [:]
         if currTimeRange == TimeRange.Day {
+            timeRangeLabel.stringValue = "Today:"
             counts = countsDay
         } else if currTimeRange == TimeRange.Week {
             counts = countsWeek
+            timeRangeLabel.stringValue = "This Week:"
         } else if currTimeRange == TimeRange.Month {
             counts = countsMonth
+            timeRangeLabel.stringValue = "This Month:"
         }
         
         // Finds max count and total count values for averaging/UI
@@ -147,26 +150,12 @@ class ViewController: NSViewController {
         //TODO: store count as 0 if nil=
         for char in emojis.characters {
             let emoji = String(char)
-            countsDay[emoji] = CDHelper.getClicksAfterDate(emoji: emoji, afterDate:  dayMark).count
-            countsWeek[emoji] = CDHelper.getClicksAfterDate(emoji: emoji, afterDate: weekMark).count
-            countsMonth[emoji] = CDHelper.getClicksAfterDate(emoji: emoji, afterDate: monthMark).count
+            countsDay[emoji] = CDHelper.getClicks(emoji: emoji, afterDate:  dayMark).count
+            countsWeek[emoji] = CDHelper.getClicks(emoji: emoji, afterDate: weekMark).count
+            countsMonth[emoji] = CDHelper.getClicks(emoji: emoji, afterDate: monthMark).count
         }
     }
-    
-    /* Stores a click in core data */
-    func storeClick(emoji: String) {
-        let context = CDHelper.getContext()
-        let emotion = emotionDict[emoji]! as NSManagedObject
-        let currCount = emotion.value(forKey: EmotionAttr.Count) as! Int
-        emotion.setValue(currCount + 1, forKey: EmotionAttr.Count)
-        let clickEntity =  NSEntityDescription.entity(forEntityName: Entity.Click, in:context)
-        let click = NSManagedObject(entity: clickEntity!, insertInto: context)
-        click.setValue(NSDate(), forKey: ClickAttr.Time)
-        click.setValue(emotion, forKey: ClickAttr.Emotion)
-        CDHelper.saveContext(context: context)
-        updateUI()
-    }
-    
+
     /* Builds UI Dictionary */
     func buildUIDict() {
         UIDict["😔"] = (count_0, bar_0)
@@ -176,14 +165,6 @@ class ViewController: NSViewController {
         UIDict["🙂"] = (count_4, bar_4)
         UIDict["😀"] = (count_5, bar_5)
         UIDict["😁"] = (count_6, bar_6)
-    }
-    
-    /* Loads Emotions to Dict */
-    func loadEmotions() {
-        let emotionList: [NSManagedObject] = CDHelper.fetchDataByType(entityName: Entity.Emotion)
-        for emotion in emotionList {
-            emotionDict[emotion.value(forKey: EmotionAttr.Emoji) as! String] = emotion
-        }
     }
     
     /* Returns touch bar to WindowController */

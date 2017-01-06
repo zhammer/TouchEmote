@@ -809,7 +809,6 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7Y-PX-0fo" userLabel="Count">
                                         <rect key="frame" x="-2" y="0.0" width="104" height="81"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="OB7-yf-WjY"/>
                                             <constraint firstAttribute="width" constant="100" id="Vi9-6a-7oO"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1" id="WKM-Kz-Zds">
@@ -1150,7 +1149,7 @@
                             <touchBarItem id="Z7z-Qr-CWC">
                                 <viewController key="viewController" id="wVI-Y9-tTD">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-Lk-tBL" userLabel="StatsButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
                                         <buttonCell key="cell" type="push" title="Statistics" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aXf-qF-2TB">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -1177,11 +1176,54 @@
                         <outlet property="count_4" destination="IUB-BX-M1k" id="sHv-aR-YKm"/>
                         <outlet property="count_5" destination="Ljl-He-clU" id="SzC-95-Pir"/>
                         <outlet property="count_6" destination="NFq-Ig-7iN" id="lgK-Tp-iOD"/>
+                        <outlet property="test" destination="nKg-1E-nZl" id="NyQ-l6-7qr"/>
+                        <outlet property="timeRangeLabel" destination="eyz-Vk-WqF" id="TeA-Ll-q8V"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="966"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="Vh0-sM-h9l">
+            <objects>
+                <viewController id="Zfn-Gh-ldo" customClass="LogViewController" customModule="TouchEmoteWithData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Qwo-jw-cy2">
+                        <rect key="frame" x="0.0" y="0.0" width="830" height="612"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-a5-ZoH" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="830" height="612"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="612" id="yQX-D2-mH7"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="jBe-bb-GJ3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-Ka-Vkg" userLabel="TimeFrame">
+                                <rect key="frame" x="226" y="272" width="379" height="68"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="How are you?" id="J8q-Ha-Q5W" userLabel="TimeFrame">
+                                    <font key="font" size="60" name="ArialMT"/>
+                                    <color key="textColor" red="0.30196078431372547" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mgb-Ka-Vkg" firstAttribute="centerY" secondItem="Qwo-jw-cy2" secondAttribute="centerY" id="1oT-4P-VX6"/>
+                            <constraint firstItem="BG5-a5-ZoH" firstAttribute="leading" secondItem="Qwo-jw-cy2" secondAttribute="leading" id="5VL-fv-Bjd"/>
+                            <constraint firstItem="mgb-Ka-Vkg" firstAttribute="centerX" secondItem="Qwo-jw-cy2" secondAttribute="centerX" id="OvW-5j-MZL"/>
+                            <constraint firstAttribute="trailing" secondItem="BG5-a5-ZoH" secondAttribute="trailing" id="c37-yb-KVo"/>
+                            <constraint firstItem="BG5-a5-ZoH" firstAttribute="top" secondItem="Qwo-jw-cy2" secondAttribute="top" id="oBa-sc-4fW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="f8n-Xc-NGr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="935"/>
         </scene>
     </scenes>
 </document>

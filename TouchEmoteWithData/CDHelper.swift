@@ -64,16 +64,33 @@ class CDHelper {
         return output
     }
     
-    /* Returns all clicks on specified emotion */
-    static func getClicks(emotion: NSManagedObject) -> [NSManagedObject] {
-        let clicks = emotion.value(forKey: EmotionAttr.Clicks) as! NSOrderedSet
-        return clicks.array as! [NSManagedObject]
+    /* Stores a click in core data */
+    static func storeClick(emoji: String) {
+        let context = getContext()
+        let predicate = NSPredicate(format: "emoji == %@", emoji)
+        let results = fetchDataByType(entityName: Entity.Emotion, predicate: predicate)
+        guard results.count == 1 else {
+            print("Error fetching emotion from DB")
+            return
+        }
+        let emotion = results[0]
+        let currCount = emotion.value(forKey: EmotionAttr.Count) as! Int
+        emotion.setValue(currCount + 1, forKey: EmotionAttr.Count)
+        let clickEntity = NSEntityDescription.entity(forEntityName: Entity.Click, in:context)
+        let click = NSManagedObject(entity: clickEntity!, insertInto: context)
+        click.setValue(Date(), forKey: ClickAttr.Time)
+        click.setValue(emotion, forKey: ClickAttr.Emotion)
+        CDHelper.saveContext(context: context)
     }
     
     /* Returns clicks on specific emotion that have ocurred after timestamp parameter */
-    static func getClicksAfterDate(emoji: String, afterDate: Date) -> [NSManagedObject] {
-        let predicate = fetchPredicate.withSubstitutionVariables(["emoji" : emoji, "date" : afterDate])
-        return fetchDataByType(entityName: Entity.Click, predicate: predicate) 
+    static func getClicks(emoji: String, afterDate: Date? = nil) -> [NSManagedObject] {
+        if afterDate == nil {
+            let predicate = NSPredicate(format: "emotion.emoji == %@", emoji)
+            return fetchDataByType(entityName: Entity.Click, predicate: predicate)
+        }
+        let predicate = fetchPredicate.withSubstitutionVariables(["emoji" : emoji, "date" : afterDate!])
+        return fetchDataByType(entityName: Entity.Click, predicate: predicate)
     }
 
     /* Returns NSManagedObjectContext reference from AppDelegate */
