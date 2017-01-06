@@ -1,18 +1,5 @@
 /* TODO */
 
-/* NSPredicate
- *
- * Select clicks with relation to specific emotion in date range
- *
- */
-
-/* RANGE caches
- *
- * dayCache, weekCache, monthCache
- * reload once day changes
- *
- */
-
 /* TWO views
  *
  * How are you feeling?
@@ -34,15 +21,6 @@
  *
  */
 
-/* UIDea
- *
- * On click, emotion fades in to center screen
- * Other buttons lock
- * close button
- *
- */
-
-
 /* README
  *
  * acknowledge funny story with zac's app
@@ -51,5 +29,3 @@
  * goal is to have it totally non-intrusive, like the spotify icon. i dont always want to see my emotions when i log one, but seems like that functionality is tougher to access
  *
  */
-
-// ["Alice Smith", "Quentin Alberts"]

@@ -28,7 +28,7 @@ struct ClickAttr {
 struct TimeRange {
     static let Day = "day"
     static let Month = "month"
-    static let Year = "year"
+    static let Week = "week"
 }
 
 //TODO: struct for timestamps
@@ -60,16 +60,20 @@ class ViewController: NSViewController {
     let emojis = "😔☹️😕😐🙂😀😁"
     let maxBarHeight = 290 as Float
     
-    var dayCurr: NSDate
-    var dayNext: NSDate
+    var dayCurr: Date?
+    var dayNext: Date?
     let currTimeRange = TimeRange.Day
-    let dayCache: [String: Int] = [:]
-    let weekCache: [String: Int] = [:]
-    let monthCache: [String: Int] = [:]
+    var countsDay: [String: Int] = [:]
+    var countsWeek: [String: Int] = [:]
+    var countsMonth: [String: Int] = [:]
     
-    @IBOutlet weak var barTest: NSTextField!
+    /* Updates app memory counts and stores click in DB */
     @IBAction func emojiButtonHandler(_ sender: NSButton) {
-        storeClick(emoji: sender.title)
+        let emoji = sender.title
+        countsDay[emoji]! += 1
+        countsWeek[emoji]! += 1
+        countsMonth[emoji]! += 1
+        storeClick(emoji: emoji)
     }
     
     /* View Did Load */
@@ -90,31 +94,34 @@ class ViewController: NSViewController {
         var totalWeight = 0
         var totalCount = 0
         var counts: [String: Int] = [:]
+        if currTimeRange == TimeRange.Day {
+            counts = countsDay
+        } else if currTimeRange == TimeRange.Week {
+            counts = countsWeek
+        } else if currTimeRange == TimeRange.Month {
+            counts = countsMonth
+        }
         
-        // Sets counts and stores current max click
+        // Finds max count and total count values for averaging/UI
         var i = 1
         for char in emojis.characters {
             let emoji = String(char)
-            let emotion = emotionDict[emoji]
-            let count = emotion?.value(forKey: EmotionAttr.Count) as! Int
+            let count = counts[emoji]!
             totalWeight += i * count
             totalCount += count
-            i += 1
             if count > maxCount {
                 maxCount = count
             }
-            counts[emoji] = count
-            UIDict[emoji]?.0.stringValue = "\(count)"
+            i += 1
         }
         
-        // Sets bar heights
+        // Sets bar heights and counter strings
         for char in emojis.characters {
             let emoji = String(char)
             let count = counts[emoji]! as Int
-            let tuple = UIDict[emoji]!
-            let bar: NSLayoutConstraint = tuple.1
             let height = CGFloat((Float(count) / Float(maxCount)) * maxBarHeight)
-            bar.constant = height
+            UIDict[emoji]?.0.stringValue = "\(count)"
+            UIDict[emoji]?.1.constant = height
         }
         
         // Updates average emoji
@@ -123,33 +130,27 @@ class ViewController: NSViewController {
         averageEmoji.stringValue = String(emojis[index])
     }
     
-    /* Saves click counts on each emotion in three time ranges in memory */
-    func loadClickCounts() {
-        //TODO: for each time range, return clicks, parse through
-        //three times
-        for char in emojis.characters {
-            let emoji = String(char)
-            //fetch all clicks of that emoji in day
-            //store to map
-            //fetch all clicks in week
-            //store count to map
-            //fetch all clicks in month
+    /* Checks and updates current day start. If day has changed, reloads click counters */
+    func updateDay() {
+        if dayCurr == nil || DateHelper.hasPassedDate(date: dayNext!) {
+            dayCurr = DateHelper.dayStart()
+            dayNext = DateHelper.nextDay(date: dayCurr!)
+            loadClickCounts()
         }
     }
     
-    /* Updates current day; if has changed, returns True */
-    @discardableResult func updateDay() -> Bool {
-        if dayCurr == nil {
-            // init day start
-            // dayNext = dayCurr + 1 day
-            loadClickCounts()
-        } else if NSDate() > dayNext {
-            //dayCurr = dayNext
-            //dayNext = dayCurr + 1 day
-            loadClickCounts()
+    /* Saves click counts on each emotion in three time ranges in memory */
+    func loadClickCounts() {
+        let dayMark: Date = dayCurr!
+        let weekMark: Date = DateHelper.prevWeek(date: dayMark)
+        let monthMark: Date = DateHelper.prevMonth(date: dayMark)
+        //TODO: store count as 0 if nil=
+        for char in emojis.characters {
+            let emoji = String(char)
+            countsDay[emoji] = CDHelper.getClicksAfterDate(emoji: emoji, afterDate:  dayMark).count
+            countsWeek[emoji] = CDHelper.getClicksAfterDate(emoji: emoji, afterDate: weekMark).count
+            countsMonth[emoji] = CDHelper.getClicksAfterDate(emoji: emoji, afterDate: monthMark).count
         }
-        // else if current date is past dayStart + 1 day
-        // maybe a next day variable?
     }
     
     /* Stores a click in core data */

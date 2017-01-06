@@ -17,51 +17,55 @@ struct Comp {
 
 class DateHelper {
     
-    /* Compares two NSDates and returns if date1 is Less than, Equal to, or Greater than date2 */
-    static func dateCompare(date1: NSDate, date2: NSDate) -> Int {
-        if date1.compare(date2 as Date) == ComparisonResult.orderedDescending {
+    /* Compares two Dates and returns if date1 is Less than, Equal to, or Greater than date2 */
+    // Change language to after / before
+    // Maybe use Date.timeIntervalSince1970
+    static func dateCompare(date1: Date, date2: Date) -> Int {
+        if date1.compare(date2) == ComparisonResult.orderedDescending {
             return Comp.Greater
-        } else if date1.compare(date2 as Date) == ComparisonResult.orderedAscending {
+        } else if date1.compare(date2) == ComparisonResult.orderedAscending {
             return Comp.Less
         } else {
             return Comp.Equal
         }
     }
     
-    /* Shifts an NSDate by month, week and day delta values */
-    static func shiftDate(date: NSDate, monthDelta: Int = 0, weekDelta: Int = 0, dayDelta: Int = 0) -> NSDate {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)! as NSCalendar
-        let components = NSDateComponents()
+    /* Returns true if date occurs after toCompare */
+    static func hasPassedDate(date: Date) -> Bool {
+        if dateCompare(date1: Date(), date2: date) == Comp.Greater {
+            return true
+        }
+        return false
+    }
+    
+    /* Shifts an Date by month, week and day delta values */
+    static func shiftDate(date: Date, monthDelta: Int = 0, weekDelta: Int = 0, dayDelta: Int = 0) -> Date {
+        let calendar = Calendar.current
+        var components = DateComponents()
         components.month = monthDelta
         components.weekOfYear = weekDelta
         components.day = dayDelta
-        return calendar.date(byAdding: components as DateComponents, to: date as Date)! as NSDate
+        return calendar.date(byAdding: components, to: date)!
     }
     
-    /* Returns NSDate one week previous to input NSDate */
-    static func prevWeek(date: NSDate) -> NSDate {
+    /* Returns Date one week previous to input Date */
+    static func prevWeek(date: Date) -> Date {
         return shiftDate(date: date, weekDelta: -1)
     }
     
-    /* Returns NSDate one month previous to input NSDate */
-    static func prevMonth(date: NSDate) -> NSDate {
+    /* Returns Date one month previous to input Date */
+    static func prevMonth(date: Date) -> Date {
         return shiftDate(date: date, monthDelta: -1)
     }
     
-    /* Returns NSDate one month after input NSDate */
-    static func nextDay(date: NSDate) -> NSDate {
+    /* Returns Date one month after input Date */
+    static func nextDay(date: Date) -> Date {
         return shiftDate(date: date, dayDelta: 1)
     }
     
     /* Returns start of day */
-    static func dayStart() -> NSDate {
-        let date = NSDate()
-        let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)! as NSCalendar
-        let components = NSDateComponents()
-        components.hour = 0
-        components.minute = 0
-        components.second = 0
-        return calendar.date(byAdding: components as DateComponents, to: date as Date)! as NSDate
+    static func dayStart() -> Date {
+        return Calendar.current.startOfDay(for: Date())
     }
     
 }

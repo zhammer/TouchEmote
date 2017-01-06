@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 import CoreData
 
-let fetchPredicate = NSPredicate(format: "(emotion.emoji == $emoji) AND time > $timestamp)")
+let fetchPredicate = NSPredicate(format: "(emotion.emoji == $emoji) AND (timestamp > $date)")
 
 class CDHelper {
     
@@ -71,8 +71,8 @@ class CDHelper {
     }
     
     /* Returns clicks on specific emotion that have ocurred after timestamp parameter */
-    static func getClicksAfterTime(emoji: String, timestamp: NSDate) -> [NSManagedObject] {
-        let predicate = fetchPredicate.withSubstitutionVariables(["emoji" : emoji, "timestamp" : timestamp])
+    static func getClicksAfterDate(emoji: String, afterDate: Date) -> [NSManagedObject] {
+        let predicate = fetchPredicate.withSubstitutionVariables(["emoji" : emoji, "date" : afterDate])
         return fetchDataByType(entityName: Entity.Click, predicate: predicate) 
     }
 

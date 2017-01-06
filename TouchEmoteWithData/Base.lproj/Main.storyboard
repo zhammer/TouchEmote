@@ -1163,7 +1163,6 @@
                     </touchBar>
                     <connections>
                         <outlet property="averageEmoji" destination="bgD-Q2-pnn" id="W3l-ns-iAd"/>
-                        <outlet property="barTest" destination="Buu-e0-ZLZ" id="Hz6-fI-rtL"/>
                         <outlet property="bar_0" destination="mxP-IQ-xUU" id="goA-pi-FNE"/>
                         <outlet property="bar_1" destination="WBM-Aw-8VL" id="eiL-oS-MNl"/>
                         <outlet property="bar_2" destination="3pn-H3-hdg" id="61g-Io-CHg"/>
