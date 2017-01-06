@@ -71,10 +71,9 @@ class CDHelper {
     }
     
     /* Returns clicks on specific emotion that have ocurred after timestamp parameter */
-    static func getClicksAfterTime(emotion: NSManagedObject, timestamp: NSDate) -> [NSManagedObject] {
-        let emoji = emotion.value(forKey: EmotionAttr.Emoji) as! String
+    static func getClicksAfterTime(emoji: String, timestamp: NSDate) -> [NSManagedObject] {
         let predicate = fetchPredicate.withSubstitutionVariables(["emoji" : emoji, "timestamp" : timestamp])
-        return fetchDataByType(entityName: Entity.Click, predicate: predicate)
+        return fetchDataByType(entityName: Entity.Click, predicate: predicate) 
     }
 
     /* Returns NSManagedObjectContext reference from AppDelegate */
