@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730B64451E206F5D00ED1860 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B64441E206F5D00ED1860 /* AnimationHelper.swift */; };
 		735F789D1E1ADFAB00D8ED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */; };
 		735F789F1E1ADFAB00D8ED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F789E1E1ADFAB00D8ED72 /* ViewController.swift */; };
 		735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 735F78A01E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		730B64441E206F5D00ED1860 /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		735F78991E1ADFAB00D8ED72 /* TouchEmoteWithData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchEmoteWithData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735F789C1E1ADFAB00D8ED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		735F789E1E1ADFAB00D8ED72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				73BDDBF01E2002370022AF3B /* LogViewController.swift */,
 				735F789E1E1ADFAB00D8ED72 /* ViewController.swift */,
 				73CBBD821E1C57AC0055EDB3 /* CDHelper.swift */,
+				730B64441E206F5D00ED1860 /* AnimationHelper.swift */,
 				738351AE1E204FAA00A649BD /* ReplaceSegue.swift */,
 				735F78A31E1ADFAB00D8ED72 /* Assets.xcassets */,
 				735F78A51E1ADFAB00D8ED72 /* Main.storyboard */,
@@ -288,6 +291,7 @@
 				73BDDBF11E2002370022AF3B /* LogViewController.swift in Sources */,
 				735F78CB1E1AE08300D8ED72 /* WindowController.swift in Sources */,
 				738351AF1E204FAA00A649BD /* ReplaceSegue.swift in Sources */,
+				730B64451E206F5D00ED1860 /* AnimationHelper.swift in Sources */,
 				73BDDBF31E200B070022AF3B /* ViewControllerWithTouchbar.swift in Sources */,
 				735F78A21E1ADFAB00D8ED72 /* TouchEmoteWithData.xcdatamodeld in Sources */,
 				73BDDBEF1E1F4F220022AF3B /* DateHelper.swift in Sources */,

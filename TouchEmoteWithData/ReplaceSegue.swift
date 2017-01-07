@@ -13,7 +13,6 @@ class ReplaceSegue: NSStoryboardSegue {
     override func perform() {
         if let fromViewController = sourceController as? NSViewController {
             if let toViewController = destinationController as? NSViewController {
-                // no animation.
                 fromViewController.view.window?.contentViewController = toViewController
             }
         }

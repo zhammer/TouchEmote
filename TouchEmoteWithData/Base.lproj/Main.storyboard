@@ -1078,7 +1078,7 @@
                             <touchBarItem id="KN8-ap-UbU">
                                 <viewController key="viewController" id="gvP-ze-dTc">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IO7-W9-ZxL">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
                                         <buttonCell key="cell" type="push" title="This Week" alternateTitle="week" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AFd-LD-j3D">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -1115,7 +1115,7 @@
                                             <font key="font" size="23" name=".AppleColorEmojiUI"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="Zfn-Gh-ldo" kind="sheet" customClass="ReplaceWindowContentSegue" customModule="CustomSegue" id="9Eg-aS-ams"/>
+                                            <segue destination="Zfn-Gh-ldo" kind="sheet" id="9Eg-aS-ams"/>
                                         </connections>
                                     </button>
                                 </viewController>
@@ -1125,7 +1125,7 @@
                     </touchBar>
                     <connections>
                         <outlet property="averageEmoji" destination="bgD-Q2-pnn" id="W3l-ns-iAd"/>
-                        <outlet property="bar_0" destination="mxP-IQ-xUU" id="goA-pi-FNE"/>
+                        <outlet property="bar_0" destination="Buu-e0-ZLZ" id="ZsA-VS-Fvc"/>
                         <outlet property="bar_1" destination="WBM-Aw-8VL" id="eiL-oS-MNl"/>
                         <outlet property="bar_2" destination="3pn-H3-hdg" id="61g-Io-CHg"/>
                         <outlet property="bar_3" destination="w3L-QC-es6" id="ZGU-WP-m52"/>
@@ -1189,7 +1189,6 @@
                                 <viewController key="viewController" id="IFc-jw-Fxn">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-V6-BR6">
                                         <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="😔" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="sPe-Am-oYW">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1205,7 +1204,6 @@
                                 <viewController key="viewController" id="KTx-H4-MEX">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-1E-nZl">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="☹️" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="zFf-wX-11b">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1220,7 +1218,6 @@
                                 <viewController key="viewController" id="rp0-ua-FW7">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SA1-X2-G3X">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="😕" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="VZF-Gl-Srn">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1235,7 +1232,6 @@
                                 <viewController key="viewController" id="5jq-XF-Xcl">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x0K-la-u0a">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="😐" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="dCv-9P-FrP">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1250,7 +1246,6 @@
                                 <viewController key="viewController" id="sc6-45-uWH">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cag-Vy-nzr">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="🙂" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="x01-Vm-SnH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1265,7 +1260,6 @@
                                 <viewController key="viewController" id="cX4-nE-Zaf">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0iT-OT-KEq">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="😀" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="47N-VD-AJ7">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1281,7 +1275,6 @@
                                 <viewController key="viewController" id="2Vk-gT-seN">
                                     <button key="view" wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I76-bI-MXB">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="bevel" title="😁" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="4h7-h6-6r0">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="23"/>
@@ -1292,26 +1285,33 @@
                                     </button>
                                 </viewController>
                             </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="psE-4N-QDX"/>
                             <touchBarItem id="hYE-aK-5Dt">
                                 <viewController key="viewController" id="Vs7-Ul-KK8">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ocv-EV-R9M">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
                                         <buttonCell key="cell" type="push" title="Statistics" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BEj-XJ-9bm">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="testHandler:" target="Zfn-Gh-ldo" id="L2L-Ri-k86"/>
-                                            <segue destination="XfG-lQ-9wD" kind="sheet" customClass="ReplaceSegue" customModule="TouchEmoteWithData" customModuleProvider="target" id="rsc-Lr-OvV"/>
+                                            <segue destination="XfG-lQ-9wD" kind="sheet" id="rsc-Lr-OvV"/>
                                         </connections>
                                     </button>
                                 </viewController>
-                                <size key="designTimeSize" width="121" height="30"/>
+                                <size key="designTimeSize" width="105" height="30"/>
                             </touchBarItem>
                         </touchBarItems>
                     </touchBar>
                     <connections>
+                        <outlet property="button_0" destination="TbE-V6-BR6" id="l9B-B2-jsV"/>
+                        <outlet property="button_1" destination="nKg-1E-nZl" id="NC0-D4-XPb"/>
+                        <outlet property="button_2" destination="SA1-X2-G3X" id="joG-Sk-5BQ"/>
+                        <outlet property="button_3" destination="x0K-la-u0a" id="uTa-wG-baZ"/>
+                        <outlet property="button_4" destination="cag-Vy-nzr" id="vMi-gA-rvl"/>
+                        <outlet property="button_5" destination="0iT-OT-KEq" id="4KY-u7-nmW"/>
+                        <outlet property="button_6" destination="I76-bI-MXB" id="3Pd-Ru-70j"/>
                         <outlet property="mainText" destination="mgb-Ka-Vkg" id="gFo-TO-eOA"/>
                     </connections>
                 </viewController>
