@@ -34,12 +34,13 @@ class LogViewController: ViewControllerWithTouchbar {
     func lockOtherButtons(pressed: NSButton) {
         //TODO?: Button mods & locking after press
         for button in buttonList {
-            // Mods for selected buttons
+            button.isEnabled = false
+            // Mods for selected button
             if button.isEqual(pressed) {
             }
             // Mods for not selected buttons
             else {
-                
+                AnimationHelper.fadeOut(component: button, toAlpha: 0.5)
             }
         }
     }
@@ -54,6 +55,10 @@ class LogViewController: ViewControllerWithTouchbar {
             button_5,
             button_6
         ]
+    }
+    
+    override func viewWillAppear() {
+        AnimationHelper.fadeIn(component: mainText)
     }
     
     override func viewDidLoad() {

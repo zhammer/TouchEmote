@@ -48,7 +48,7 @@ class CDHelper {
     }
     
     /* Fetches data of Entity specified by name. Returns results as [NSManagedObject] */
-    static func fetchDataByType(entityName: String , predicate: NSPredicate? = nil) -> [NSManagedObject] {
+    private static func fetchDataByType(entityName: String , predicate: NSPredicate? = nil) -> [NSManagedObject] {
         let context = getContext()
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         if (predicate != nil) {
@@ -94,13 +94,13 @@ class CDHelper {
     }
 
     /* Returns NSManagedObjectContext reference from AppDelegate */
-    static func getContext () -> NSManagedObjectContext {
+    private static func getContext () -> NSManagedObjectContext {
         let appDelegate = NSApplication.shared().delegate as! AppDelegate
         return appDelegate.managedObjectContext
     }
     
     /* Saves NSManagedOBjectContext */
-    static func saveContext (context: NSManagedObjectContext) {
+    private static func saveContext (context: NSManagedObjectContext) {
         do {
             try context.save()
         } catch let error as NSError  {

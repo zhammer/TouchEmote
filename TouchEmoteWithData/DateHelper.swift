@@ -10,21 +10,19 @@ import Foundation
 import Cocoa
 
 struct Comp {
-    static let Less = -1
+    static let Before = -1
     static let Equal = 0
-    static let Greater = 1
+    static let After = 1
 }
 
 class DateHelper {
     
     /* Compares two Dates and returns if date1 is Less than, Equal to, or Greater than date2 */
-    // Change language to after / before
-    // Maybe use Date.timeIntervalSince1970
-    static func dateCompare(date1: Date, date2: Date) -> Int {
+    private static func dateCompare(date1: Date, date2: Date) -> Int {
         if date1.compare(date2) == ComparisonResult.orderedDescending {
-            return Comp.Greater
+            return Comp.After
         } else if date1.compare(date2) == ComparisonResult.orderedAscending {
-            return Comp.Less
+            return Comp.Before
         } else {
             return Comp.Equal
         }
@@ -32,14 +30,14 @@ class DateHelper {
     
     /* Returns true if date occurs after toCompare */
     static func hasPassedDate(date: Date) -> Bool {
-        if dateCompare(date1: Date(), date2: date) == Comp.Greater {
+        if dateCompare(date1: Date(), date2: date) == Comp.After {
             return true
         }
         return false
     }
     
-    /* Shifts an Date by month, week and day delta values */
-    static func shiftDate(date: Date, monthDelta: Int = 0, weekDelta: Int = 0, dayDelta: Int = 0) -> Date {
+    /* Shifts a Date by month, week and day delta values */
+    private static func shiftDate(date: Date, monthDelta: Int = 0, weekDelta: Int = 0, dayDelta: Int = 0) -> Date {
         let calendar = Calendar.current
         var components = DateComponents()
         components.month = monthDelta
@@ -58,7 +56,7 @@ class DateHelper {
         return shiftDate(date: date, monthDelta: -1)
     }
     
-    /* Returns Date one month after input Date */
+    /* Returns Date one day after input Date */
     static func nextDay(date: Date) -> Date {
         return shiftDate(date: date, dayDelta: 1)
     }

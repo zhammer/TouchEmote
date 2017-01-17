@@ -123,15 +123,23 @@ class ViewController: ViewControllerWithTouchbar {
         for char in emojis.characters {
             let emoji = String(char)
             let count = counts[emoji]! as Int
+            //TODO: maxCountForDisplay min is 15?
             let height = CGFloat((Float(count) / Float(maxCount)) * maxBarHeight)
+            AnimationHelper.dissolve(label: (UIDict[emoji]?.0)!)
             UIDict[emoji]?.0.stringValue = "\(count)"
-            UIDict[emoji]?.1.constant = height
+            let bar = UIDict[emoji]!.1
+            AnimationHelper.growConstraint(constraint: bar, fromSize: bar.constant, toSize: height, duration: 2)
         }
         
         // Updates average emoji
-        let average = Int(round(Double(totalWeight) / Double(totalCount)))
-        let index = emojis.index(emojis.startIndex, offsetBy: average - 1)
-        averageEmoji.stringValue = String(emojis[index])
+        if (totalCount == 0) {
+            averageEmoji.stringValue = ""
+        }
+        else {
+            let average = Int(round(Double(totalWeight) / Double(totalCount)))
+            let index = emojis.index(emojis.startIndex, offsetBy: average - 1)
+            averageEmoji.stringValue = String(emojis[index])
+        }
     }
     
     /* Checks and updates current day start. If day has changed, reloads click counters */
