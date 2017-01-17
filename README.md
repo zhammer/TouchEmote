@@ -4,12 +4,12 @@ TouchEmote is a non-intrusive way to log emotional states using the new Macbook 
 ![Alt text](/images/weekData.png?raw=true "Data display")
 
 # Specs
-TouchEmote is written in Swift 3.0 in the XCode 8 environment. I use XCode's Core Data functionality to store emotion logging data and followed Apple's new Human Interface Guidelines for using the NSTouchBar.
+TouchEmote is written in Swift 3.0 in the XCode 8 environment. I used XCode's Core Data functionality to store logged emotion data and followed Apple's Human Interface Guidelines for using the NSTouchBar.
 
 ![Alt text](/images/imageWithTouchbar.JPG?raw=true "Picture")
 
 # Todo
-There currently is not many forums with active questions and answers about touch bar issues. I'd like to convert the 'sheet' segue from the greeting view to the statistics view to a custom segue, though when I do so the touchbar doesn't properly reload.
+There currently are not many forums with active questions and answers about touch bar issues. I'd like to convert the 'sheet' segue from the greeting view to the statistics view to a custom segue, though when I do so the touchbar doesn't properly reload.
 As time goes on I'd like to build other data analysis displays.
 
 #Thanks
