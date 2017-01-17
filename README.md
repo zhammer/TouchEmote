@@ -1,5 +1,5 @@
 # TouchEmote
-A non-intrusive way to log your emotional states using the new Macbook touchbar. The simple UI allows users to touch an emoji on a 7-point scale that best represents their mood. That data can be displayed back to the user based on the user's moods that day, week or month.
+TouchEmote is a non-intrusive way to log emotional states using the new Macbook touchbar. The simple UI allows users to touch an emoji on a 7-point scale that best represents their mood. That data can be displayed back to the user based on the user's moods that day, week or month.
 
 ![Alt text](/images/weekData.png?raw=true "Data display")
 
