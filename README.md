@@ -14,4 +14,4 @@ As time goes on I'd like to build other data analysis displays.
 
 #Thanks
 https://www.raywenderlich.com/ and http://nshipster.com/ both had great tutorials for newcomers to Swift/XCode development.
-Also wanted to share: the day I started developing this app I search github for NSTouchBar repos and found Zac Kwan's (@Zaccc123) 'How are you feeling today?' touchbar app. As is said: great Zachs think alike.
+Also wanted to share: the day I started developing this app I searched github for NSTouchBar repos and found Zac Kwan's (@Zaccc123) 'How are you feeling today?' touchbar app. As is said: great Zachs think alike.
